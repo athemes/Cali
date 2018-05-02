@@ -137,7 +137,7 @@ add_action( 'widgets_init', 'mode_widgets_init' );
  */
 function mode_scripts() {
 
-	wp_enqueue_style( 'mode-fonts', '//fonts.googleapis.com/css?family=Lato:400,700|Playfair+Display:400,400i|Work+Sans:300,400,500,600|Sacramento', array(), null );
+	wp_enqueue_style( 'mode-fonts', '//fonts.googleapis.com/css?family=Playfair+Display:400,400i|Work+Sans:300,400,500,600', array(), null );
 
 	wp_enqueue_style( 'mode-style', get_stylesheet_uri() );
 

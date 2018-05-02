@@ -30,30 +30,5 @@
 		</ul>
 	<?php
 	}
-
-	// TODO: Add single post share buttons. Plugin?
 	?>
-	<!-- <ul class="single-post_share">
-		<li>Share</li>
-		<li>
-			<a href="#">
-				<i class="fa fa-facebook"></i>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<i class="fa fa-twitter"></i>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<i class="fa fa-google-plus"></i>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<i class="fa fa-instagram"></i>
-			</a>
-		</li>
-	</ul> -->
 </footer>

@@ -360,29 +360,153 @@ Mode_Kirki::add_field( 'mode', array(
 Mode_Kirki::add_field( 'mode', array(
 	'type'        => 'select',
 	'settings'    => 'mode_single_header_layout',
-	'label'       => __( 'Blog post header layout?', 'mode' ),
+	'label'       => esc_attr__( 'Blog post header layout?', 'mode' ),
 	'section'     => 'mode_blog_singles',
 	'default'     => 'feat-img--top',
 	'priority'    => 10,
 	'multiple'    => 1,
 	'choices'     => array(
-		'feat-img--top'	=> __( 'Featured image on top', 'mode' ),
-		'post-title--top'	=> __( 'Title on top', 'mode' ),
+		'feat-img--top'	=> esc_attr__( 'Featured image on top', 'mode' ),
+		'post-title--top'	=> esc_attr__( 'Title on top', 'mode' ),
 	)
 ) );
 Mode_Kirki::add_field( 'mode', array(
 	'type'        => 'select',
 	'settings'    => 'mode_single_title_alignment',
-	'label'       => __( 'Blog post title alignment?', 'mode' ),
+	'label'       => esc_attr__( 'Blog post title alignment?', 'mode' ),
 	'section'     => 'mode_blog_singles',
 	'default'     => 'post-title--align-center',
 	'priority'    => 10,
 	'multiple'    => 1,
 	'choices'     => array(
-		'post-title--align-left'	=> __( 'Align left', 'mode' ),
-		'post-title--align-center'	=> __( 'Align center', 'mode' ),
-		'post-title--align-right'	=> __( 'Align right', 'mode' ),
+		'post-title--align-left'	=> esc_attr__( 'Align left', 'mode' ),
+		'post-title--align-center'	=> esc_attr__( 'Align center', 'mode' ),
+		'post-title--align-right'	=> esc_attr__( 'Align right', 'mode' ),
 	)
+) );
+
+/* Post slider options */
+Mode_Kirki::add_section( 'mode_post_slider', array(
+    'title'          => esc_attr__( 'Post slider', 'mode' ),
+    'panel'          => '',
+    'priority'       => 21,
+) );
+Mode_Kirki::add_field( 'mode', array(
+    'type'        => 'select',
+    'settings'    => 'mode_post_slider_category',
+    'label'       => esc_attr__( 'Select post slider category', 'mode' ),
+    'description' => esc_attr__( 'Category with more than 4 posts recommended', 'mode' ),
+    'section'     => 'mode_post_slider',
+    'default'     => 'option-1',
+    'priority'    => 10,
+    'choices'     => Kirki_Helper::get_terms( 'category' ),
+) );
+Mode_Kirki::add_field( 'mode', array(
+	'type'        => 'checkbox',
+	'settings'    => 'mode_post_slider_hide_cat',
+	'label'       => esc_attr__( 'Hide post slider category?', 'mode' ),
+	'section'     => 'mode_post_slider',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+/* Woocommerce options */
+Mode_Kirki::add_panel( 'mode_woocommerce_panel', array(
+    'priority'    => 21,
+    'title'       => esc_attr__( 'Mode: WooCommerce', 'mode' ),
+) );
+
+// Woocommerce options: General
+Mode_Kirki::add_section( 'mode_woocommerce_general', array(
+    'title'          => esc_attr__( 'General', 'mode' ),
+    'panel'          => 'mode_woocommerce_panel',
+    'priority'       => 1,
+) );
+Mode_Kirki::add_field( 'mode', array(
+	'type'        => 'checkbox',
+	'settings'    => 'mode_show_wc_cart',
+	'label'       => esc_attr__( 'Show Cart icon and dropdown in menu?', 'mode' ),
+	'section'     => 'mode_woocommerce_general',
+	'default'     => '1',
+	'priority'    => 10,
+) );
+Mode_Kirki::add_field( 'mode', array(
+	'type'        => 'checkbox',
+	'settings'    => 'mode_hide_wc_bc',
+	'label'       => esc_attr__( 'Hide breadcrumbs on shop, archive and single product pages?', 'mode' ),
+	'section'     => 'mode_woocommerce_general',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+// Woocommerce options: Single product
+Mode_Kirki::add_section( 'mode_single_product', array(
+    'title'          => esc_attr__( 'Single products', 'mode' ),
+    'panel'          => 'mode_woocommerce_panel',
+    'priority'       => 1,
+) );
+Mode_Kirki::add_field( 'mode', array(
+	'type'        => 'checkbox',
+	'settings'    => 'mode_hide_product_rating_single',
+	'label'       => esc_attr__( 'Hide product star rating on single product?', 'mode' ),
+	'section'     => 'mode_single_product',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+Mode_Kirki::add_field( 'mode', array(
+	'type'        => 'checkbox',
+	'settings'    => 'mode_hide_product_summary_single',
+	'label'       => esc_attr__( 'Hide product SKU, Categories and Tags on single product?', 'mode' ),
+	'section'     => 'mode_single_product',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+// Woocommerce options: Product archives
+Mode_Kirki::add_section( 'mode_product_archives', array(
+    'title'          => esc_attr__( 'Product archives', 'mode' ),
+    'panel'          => 'mode_woocommerce_panel',
+    'priority'       => 2,
+) );
+Mode_Kirki::add_field( 'mode', array(
+	'type'        => 'checkbox',
+	'settings'    => 'mode_hide_product_archive_sorting',
+	'label'       => esc_attr__( 'Hide sorting on shop and archive pages?', 'mode' ),
+	'section'     => 'mode_product_archives',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+Mode_Kirki::add_field( 'mode', array(
+	'type'        => 'checkbox',
+	'settings'    => 'mode_hide_product_archive_results',
+	'label'       => esc_attr__( 'Hide number of results on shop and archive pages?', 'mode' ),
+	'section'     => 'mode_product_archives',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+Mode_Kirki::add_field( 'mode', array(
+	'type'        => 'checkbox',
+	'settings'    => 'mode_hide_product_archive_price',
+	'label'       => esc_attr__( 'Hide product price on shop and archive pages?', 'mode' ),
+	'section'     => 'mode_product_archives',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+Mode_Kirki::add_field( 'mode', array(
+	'type'        => 'checkbox',
+	'settings'    => 'mode_hide_product_archive_ratings',
+	'label'       => esc_attr__( 'Hide product ratings on shop and archive pages?', 'mode' ),
+	'section'     => 'mode_product_archives',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+Mode_Kirki::add_field( 'mode', array(
+	'type'        => 'checkbox',
+	'settings'    => 'mode_hide_product_archive_atc',
+	'label'       => esc_attr__( 'Hide "add to cart" button on shop and archive pages?', 'mode' ),
+	'section'     => 'mode_product_archives',
+	'default'     => '0',
+	'priority'    => 10,
 ) );
 
 /* Page options */
@@ -400,47 +524,40 @@ Mode_Kirki::add_field( 'mode', array(
 	'priority'    => 10,
 ) );
 Mode_Kirki::add_field( 'mode', array(
+	'type'        => 'checkbox',
+	'settings'    => 'mode_hide_yoast_bc',
+	'label'       => esc_attr__( 'Hide Yoast breadcrumbs on pages (except WooCommerce)?', 'mode' ),
+	'section'     => 'mode_page',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+Mode_Kirki::add_field( 'mode', array(
 	'type'        => 'select',
 	'settings'    => 'mode_page_header_layout',
-	'label'       => __( 'Page header layout?', 'mode' ),
+	'label'       => esc_attr__( 'Page header layout?', 'mode' ),
 	'section'     => 'mode_page',
 	'default'     => 'page-title--top',
 	'priority'    => 10,
 	'multiple'    => 1,
 	'choices'     => array(
-		'page-title--top'	=> __( 'Title on top', 'mode' ),
-		'feat-img--top'	=> __( 'Featured image on top', 'mode' ),
+		'page-title--top'	=> esc_attr__( 'Title on top', 'mode' ),
+		'feat-img--top'	=> esc_attr__( 'Featured image on top', 'mode' ),
 	)
 ) );
 Mode_Kirki::add_field( 'mode', array(
 	'type'        => 'select',
 	'settings'    => 'mode_page_title_alignment',
-	'label'       => __( 'Page title alignment?', 'mode' ),
+	'label'       => esc_attr__( 'Page title alignment?', 'mode' ),
 	'section'     => 'mode_page',
 	'default'     => 'page-title--align-center',
 	'priority'    => 10,
 	'multiple'    => 1,
 	'choices'     => array(
-		'page-title--align-left'	=> __( 'Align left', 'mode' ),
-		'page-title--align-center'	=> __( 'Align center', 'mode' ),
-		'page-title--align-right'	=> __( 'Align right', 'mode' ),
+		'page-title--align-left'	=> esc_attr__( 'Align left', 'mode' ),
+		'page-title--align-center'	=> esc_attr__( 'Align center', 'mode' ),
+		'page-title--align-right'	=> esc_attr__( 'Align right', 'mode' ),
 	)
 ) );
-
-/* Footer options */
-// Mode_Kirki::add_section( 'mode_footer', array(
-//     'title'          => esc_attr__( 'Footer', 'mode' ),
-//     'panel'          => '',
-//     'priority'       => 32,
-// ) );
-// Mode_Kirki::add_field( 'mode', array(
-// 	'type'        => 'checkbox',
-// 	'settings'    => 'mode_boxed_footer',
-// 	'label'       => esc_attr__( 'Make the footer boxed?', 'mode' ),
-// 	'section'     => 'mode_footer',
-// 	'default'     => '0',
-// 	'priority'    => 10,
-// ) );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.

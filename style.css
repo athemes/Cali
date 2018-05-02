@@ -317,14 +317,6 @@ transparent-black: rgba(#191919,0.5);
 	font-family: 'Work Sans', 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-.font-family--3 {
-	font-family: 'Lato', sans-serif;
-}
-
-.font-family--4 {
-	font-family: 'Sacramento', 'Playfair Display', sans-serif;
-}
-
 body,
 button,
 input,
@@ -427,7 +419,7 @@ figcaption {
 	color: #fb397d;
 	text-transform: uppercase;
 	letter-spacing: 0.2px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Work Sans', 'Open Sans', Helvetica, Arial, sans-serif;
 	font-size: 10px;
 	line-height: 1.667;
 	font-weight: bold;
@@ -2604,7 +2596,7 @@ a:hover, a:active {
 }
 
 .author_name {
-	font-family: 'Sacramento', 'Playfair Display', sans-serif;
+	font-family: 'Playfair Display', serif;
 	font-size: 24px;
 	line-height: 1;
 	margin-bottom: 20px;
@@ -2638,8 +2630,8 @@ a:hover, a:active {
 .mo-popular-posts img {
 	display: block;
 	width: 150px;
-	float: left;
 	height: 100px;
+	float: left;
 	object-fit: cover;
 }
 
@@ -2925,6 +2917,27 @@ a:hover, a:active {
 	padding: 25px 0 0;
 }
 
+.regular-post .entry-thumb {
+	display: block;
+	position: relative;
+}
+
+.regular-post .entry-thumb::before {
+	content: "";
+	display: block;
+	width: 100%;
+	padding-top: 72.22%; /* to have that 18 : 13 aspect ratio, 360x260px */
+}
+
+.regular-post .entry-thumb img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 /* highllighted post has it's own custom positioned Read more link */
 .highlighted-post .read-more {
 	display: none;
@@ -3181,7 +3194,7 @@ section.not-found {
 }
 
 .page-author_name {
-	font-family: 'Sacramento', 'Playfair Display', sans-serif;
+	font-family: 'Playfair Display', serif;
 	font-size: 36px;
 	line-height: 1;
 	margin-bottom: 0px;
@@ -3354,6 +3367,15 @@ ul.product_list_widget a.remove:focus {
 .woocommerce ul.products li.product, 
 .woocommerce-page ul.products li.product {
 	text-align: center;
+}
+
+.woocommerce .products .star-rating {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.woocommerce a.button.loading::after {
+	top: 11px;
 }
 
 

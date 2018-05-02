@@ -8,22 +8,24 @@
  */
 
 
-$moSliderMobile = 2;
-$moSliderTablet = 3;
-$moSliderDesktop = 4;
+$moSliderMobile 		= 2;
+$moSliderTablet 		= 3;
+$moSliderDesktop 		= 4;
 
-$moSliderClasses = ' mo-slider-mobile-' . $moSliderMobile . ' mo-slider-tablet-' . $moSliderTablet . ' mo-slider-desktop-' . $moSliderDesktop;
+$moSliderClasses 		= ' mo-slider-mobile-' . $moSliderMobile . ' mo-slider-tablet-' . $moSliderTablet . ' mo-slider-desktop-' . $moSliderDesktop;
 
-$moSliderCategory = 'post-slider';
+$moSliderCategory		= get_theme_mod( 'mode_post_slider_category' );
+$hide_post_slider_cat	= get_theme_mod( 'mode_post_slider_hide_cat', 0 );
+
 ?>
-
+<h1><?php //echo $moSliderCategoryTest; ?></h1>
 <div class="mo-slider js-mo-article-slider owl-carousel owl-theme <?php echo $moSliderClasses; ?>">
 	<?php
 
 	// Arguments
 	$args = array(
 		'post_type' => 'post',
-		'category_name' => $moSliderCategory
+		'cat' => $moSliderCategory
 	);
 
 	// The Query
@@ -37,7 +39,9 @@ $moSliderCategory = 'post-slider';
 				<a href="<?php the_permalink(); ?>" class="mo-slider_slide">
 					<?php the_post_thumbnail(); ?>
 					<div class="slide-overlay">
+						<?php if ( !$hide_post_slider_cat ) : ?>
 						<span class="slide-overlay_category mo-category"><?php mode_get_first_cat_name(); ?></span>
+						<?php endif; ?>
 						<?php the_title( '<h2 class="slide-overlay_title">', '</h2>' ); ?>
 						<span class="slide-overlay_meta">
 							<?php mode_posted_on_static(); ?>
@@ -49,7 +53,7 @@ $moSliderCategory = 'post-slider';
 			
 		}
 	} else { ?>
-		<h3>Please add posts to the 'post-slider' category to populate the Post carousel</h3>
+		<h3><?php _e('Please add posts to the selected slider category in Customizer to populate the Post slider', 'mode'); ?></h3>
 	<?php
 	}
 	/* Restore original Post Data */

@@ -44,7 +44,10 @@
 						</div>
 						<div class="col-xs-3 col-sm-2 mo-hide-on-desktop pull-right secondary-navigation__wrap secondary-navigation__wrap--mobile-top">
 							<div class="secondary-navigation">
-								<?php if ( class_exists( 'Woocommerce' ) ) :
+								<?php
+								$show_wc_cart = get_theme_mod( 'mode_show_wc_cart', 1 );
+								
+								if ( class_exists( 'Woocommerce' ) && $show_wc_cart ) :
 
 									// Mobile WooCommerce Cart dropdown
 									get_template_part( 'template-parts/content', 'wc_cart_mini' );
@@ -63,7 +66,8 @@
 									</div>
 
 									<div class="mo-hide-on-mobile">
-										<?php if ( class_exists( 'Woocommerce' ) ) :
+										<?php 
+										if ( class_exists( 'Woocommerce' ) && $show_wc_cart ) :
 										
 										// Desktop WooCommerce Cart dropdown
 										get_template_part( 'template-parts/content', 'wc_cart_mini' );
@@ -108,7 +112,7 @@
 	<div id="content" class="site-content"><!-- ends in footer.php -->
 		<?php
 
-		// include post slider on home.php ie. blog post home page and the static home page for now
+		// include post slider on home.php ie. blog post home page
 		if ( is_home() ) :
 			get_template_part( 'template-parts/content', 'slider_article' );
 		endif;

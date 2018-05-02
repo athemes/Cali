@@ -50,10 +50,10 @@ class Mode_Sidebar_Posts extends WP_Widget {
 			<?php while ( $r->have_posts() ) : $r->the_post(); ?>
 				<li>
 					<a href="<?php echo esc_url( get_permalink() ); ?>" class="clearfix">
-						<?php the_post_thumbnail(); ?>
+						<?php the_post_thumbnail('thumbnail'); ?>
 						<?php the_title( '<h3 class="post-title">','</h3>' ); ?>
 						<?php if ( $show_author ) : ?>
-							<span class="byline">by <em><?php echo get_the_author(); ?></em></span>
+							<span class="byline"><?php _e('by', 'mode'); ?> <em><?php echo get_the_author(); ?></em></span>
 						<?php endif; ?>
 					</a>
 				</li>

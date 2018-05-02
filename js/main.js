@@ -6,12 +6,6 @@
 		$doc = $( document ),
         $body = $( 'body' );
 
-    // Console log function
-    // TODO: remove after development
-    function modeTest($msg) {
-        console.log($msg);
-    }
-
     // owlCarousel
 	function modeOwlCarousel() {
         if ( $.fn.owlCarousel ) {
@@ -153,20 +147,18 @@
         modeOwlCarousel();
         mobileMenu();
         headerHeightTweaks();
-        modeTest('document ready');
 	} );
 
 	$win.load( function() {
-        modeTest('window load');
+        // on window load
 	} );
 
 	$win.scroll( function( e ) {
-		modeTest('window scroll');
+		// on page scroll
 	} );
 
 	$win.resize(function( e ) {
         headerHeightTweaks();
-		modeTest('window resize');
 	} );
 
 } )( jQuery );

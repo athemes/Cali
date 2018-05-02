@@ -30,7 +30,7 @@
                 <div class="col-sm-6">
                     <article class="regular-post post">
                         <div class="entry-thumb">
-                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium_large'); ?></a>
                         </div>
                         <header class="entry-header">
                             <div class="cat-links mo-category">

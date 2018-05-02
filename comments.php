@@ -80,21 +80,21 @@ if ( post_password_required() ) {
 	$aria_req = ( $req ? " aria-required='true'" : '' );
 	$html_req = ( $req ? " required='required'" : '' );
 	
-	$html5 = true; // <TODO:> get appropriate value </TODO:>
+	$html5 = true;
 
 	$comment_args = array( 
 		'title_reply'			=> 'Leave a comment',
 		'fields' 				=> apply_filters( 'comment_form_default_fields', array(
 		'author' 				=> '<p class="comment-form-author">' .
-									'<input id="author" name="author" type="text" placeholder="' . __( 'Name' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
+									'<input id="author" name="author" type="text" placeholder="' . __( 'Name', 'mode' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
 		'email'  				=> '<p class="comment-form-email">' .
-		            				'<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' placeholder="' . __( 'Email' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
+		            				'<input id="email" name="email" type="email" placeholder="' . __( 'Email', 'mode' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
 		'url'    				=> '<p class="comment-form-url">' .
-									'<input id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' placeholder="' . __( 'Website' ) .'" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>'
+									'<input id="url" name="url" type="url" placeholder="' . __( 'Website', 'mode' ) .'" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>'
 		)),
-		'comment_field' 		=> '<p class="comment-form-comment"><textarea id="comment" name="comment" placeholder="' . _x( 'Message', 'noun' ) . ' *' . '" cols="45" rows="3" maxlength="65525" aria-required="true" required="required"></textarea></p>',
+		'comment_field' 		=> '<p class="comment-form-comment"><textarea id="comment" name="comment" placeholder="' . _x( 'Message', 'noun', 'mode' ) . ' *' . '" cols="45" rows="3" maxlength="65525" aria-required="true" required="required"></textarea></p>',
 		'comment_notes_after' 	=> '',
-		'label_submit'         	=> __( 'Send Message' ),
+		'label_submit'         	=> __( 'Send Message', 'mode' ),
 	);
 
 	comment_form($comment_args);

@@ -7,7 +7,7 @@
  * @package Mode
  */
 
-$postSliderCategoryID = 14;
+$moSliderCategory = get_theme_mod( 'mode_post_slider_category');
 
 $sidebar = get_theme_mod( 'mode_blog_home_sidebar' );
 
@@ -32,7 +32,7 @@ get_header(); ?>
 					// Arguments
 					$args = array(
 						'post_type' => 'post',
-						'category__not_in' => $postSliderCategoryID,
+						'category__not_in' => $moSliderCategory, // excluding posts from Post slider
 					);
 
 					// The Query

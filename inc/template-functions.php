@@ -51,25 +51,25 @@ function mode_comment_template($comment, $args, $depth) {
 						<time datetime="<?php comment_time( 'c' ); ?>">
 							<?php
 								/* translators: 1: comment date, 2: comment time */
-								printf( __( '%1$s at %2$s' ), get_comment_date( '', $comment ), get_comment_time() );
+								printf( __( '%1$s at %2$s', 'mode' ), get_comment_date( '', $comment ), get_comment_time() );
 							?>
 						</time>
 					</span><!-- .comment-metadata -->
 					<a class="comment-href" href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
-						<span class="sr-only">Direct link to comment</span>
+						<span class="sr-only"><?php _e( 'Direct link to comment', 'mode' ); ?></span>
 						<i class="fa fa-link"></i>
 					</a>
 				</header><!-- .comment-meta -->
 
 				<div class="comment-content">
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-					<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
+					<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'mode' ); ?></p>
 					<?php endif; ?>
 
 					<?php comment_text(); ?>
 				</div><!-- .comment-content -->
 				<footer class="comment-links">
-					<?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_comment_link( __( 'Edit', 'mode' ), '<span class="edit-link">', '</span>' ); ?>
 					<?php
 					comment_reply_link( array_merge( $args, array(
 						'add_below' => 'div-comment',
@@ -88,13 +88,13 @@ function mode_comment_template($comment, $args, $depth) {
 /**
  * Move comment textarea to bottom.
  */
-function wpb_move_comment_field_to_bottom( $fields ) {
+function mode_move_comment_field_to_bottom( $fields ) {
 	$comment_field = $fields['comment'];
 	unset( $fields['comment'] );
 	$fields['comment'] = $comment_field;
 	return $fields;
 } 
-add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
+add_filter( 'comment_form_fields', 'mode_move_comment_field_to_bottom' );
 
 /**
  * Excerpt length
@@ -112,15 +112,6 @@ add_filter( 'excerpt_length', 'mode_excerpt_length', 999 );
 
 /**
  * Excerpt read more
- * We are using a custom Read more position, so the default read more is removed
- */
-// function mode_custom_excerpt( $more ) {
-// 	return '&hellip;';
-// }
-// add_filter( 'excerpt_more', 'mode_custom_excerpt' );
-
-/**
- * Excerpt read more
  * We are using a custom Read more position for highlighted posts
  */
 function mode_custom_excerpt( $more ) {
@@ -133,7 +124,7 @@ function mode_custom_excerpt( $more ) {
   	if ( $more == '' ) {
     	return '<span class="read-more">[&hellip;]</span>';
 	} else {
-		return ' <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . esc_html( $more ) . '</a>';
+		return ' <a class="read-more" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . esc_html( $more ) . '</a>';
 	}
 }
 add_filter( 'excerpt_more', 'mode_custom_excerpt' );

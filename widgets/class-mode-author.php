@@ -48,8 +48,6 @@
 	function form( $instance ) {
 		$title 		= isset( $instance['title'] ) ? $instance['title'] : '';
 
-		$menus = wp_get_nav_menus( array( 'orderby' => 'name' ) );
-
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'mode') ?></label>
