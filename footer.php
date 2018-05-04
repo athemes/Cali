@@ -29,6 +29,7 @@
 					wp_nav_menu( array(
 						'theme_location' => 'menu-social-footer',
 						'menu_id'        => 'social-footer-menu',
+						'fallback_cb'	 => false 
 					) );
 				?>
 			</nav>

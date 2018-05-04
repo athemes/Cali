@@ -15,7 +15,7 @@
 
 <div class="wc-header-cart__wrap">
     <a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="wc-header-cart__link">
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <i class="mo mo-basket" aria-hidden="true"></i>
         <span class="screen-reader-text"><?php esc_html_e( 'Cart', 'mode' ); ?></span>
         <span class="wc-header-cart__cart-count">(<?php echo intval($cart_content); ?>)</span>
     </a>

@@ -20,26 +20,31 @@ get_header(); ?>
 		<div id="primary" class="content-area col-md-12">
 			<main id="main" class="site-main">
 				<section>
-						<div class="post-layout post-layout-columns-3 clearfix">
-							<div class="row">
+					<div class="post-layout post-layout-columns-3 clearfix">
+						<div class="row">
+							<?php
+							/* Start the Loop */
+							while ( have_posts() ) : the_post(); ?>
+								<div class="col-sm-6 col-md-4">
+									<?php
+									/*
+									* Include the Post-Format-specific template for the content.
+									* If you want to override this in a child theme, then include a file
+									* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+									*/
+									get_template_part( 'template-parts/content', 'search' );
+									?>
+								</div>
+							<?php
+							endwhile; ?>
+							<div class="col-xs-12">
 								<?php
-								/* Start the Loop */
-								while ( have_posts() ) : the_post(); ?>
-									<div class="col-sm-6 col-md-4">
-										<?php
-										/*
-										* Include the Post-Format-specific template for the content.
-										* If you want to override this in a child theme, then include a file
-										* called content-___.php (where ___ is the Post Format name) and that will be used instead.
-										*/
-										get_template_part( 'template-parts/content', 'search' );
-										?>
-									</div>
-								<?php
-								endwhile; ?>
+								/* Post pagination */
+								the_posts_pagination(); 
+								?>
 							</div>
 						</div>
-						<?php the_posts_navigation(); ?>
+					</div>
 				</section>
 			</main><!-- #main -->
 		</div><!-- #primary -->

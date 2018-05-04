@@ -1,0 +1,265 @@
+@font-face {
+  font-family: 'font-awesome-essential';
+  src: url('../fonts/font-awesome-essential.eot?2135064');
+  src: url('../fonts/font-awesome-essential.eot?2135064#iefix') format('embedded-opentype'),
+       url('../fonts/font-awesome-essential.woff2?2135064') format('woff2'),
+       url('../fonts/font-awesome-essential.woff?2135064') format('woff'),
+       url('../fonts/font-awesome-essential.ttf?2135064') format('truetype'),
+       url('../fonts/font-awesome-essential.svg?2135064#font-awesome-essential') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'font-awesome-essential';
+    src: url('../font/font-awesome-essential.svg?2135064#font-awesome-essential') format('svg');
+  }
+}
+*/
+ 
+.mo {
+  font: normal normal normal 14px/1 "font-awesome-essential";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.mo-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.mo-2x {
+  font-size: 2em;
+}
+.mo-3x {
+  font-size: 3em;
+}
+.mo-4x {
+  font-size: 4em;
+}
+.mo-5x {
+  font-size: 5em;
+}
+.mo-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+.mo-ul {
+  padding-left: 0;
+  margin-left: 2.14285714em;
+  list-style-type: none;
+}
+.mo-ul > li {
+  position: relative;
+}
+.mo-li {
+  position: absolute;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+.mo-li.mo-lg {
+  left: -1.85714286em;
+}
+.mo-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em;
+}
+.mo-pull-left {
+  float: left;
+}
+.mo-pull-right {
+  float: right;
+}
+.mo.mo-pull-left {
+  margin-right: .3em;
+}
+.mo.mo-pull-right {
+  margin-left: .3em;
+}
+.mo-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+.mo-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.mo-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.mo-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.mo-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.mo-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.mo-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+:root .mo-rotate-90,
+:root .mo-rotate-180,
+:root .mo-rotate-270,
+:root .mo-flip-horizontal,
+:root .mo-flip-vertical {
+  filter: none;
+}
+.mo-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.mo-stack-1x,
+.mo-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.mo-stack-1x {
+  line-height: inherit;
+}
+.mo-stack-2x {
+  font-size: 2em;
+}
+.mo-inverse {
+  color: #ffffff;
+}
+ 
+.mo-picture:before { content: '\e800'; } /* '' */
+.mo-search:before { content: '\e801'; } /* '' */
+.mo-basket:before { content: '\e802'; } /* '' */
+.mo-phone:before { content: '\e803'; } /* '' */
+.mo-link:before { content: '\e804'; } /* '' */
+.mo-home:before { content: '\e805'; } /* '' */
+.mo-pin:before { content: '\e806'; } /* '' */
+.mo-twitter:before { content: '\f099'; } /* '' */
+.mo-facebook:before { content: '\f09a'; } /* '' */
+.mo-pinterest-circled:before { content: '\f0d2'; } /* '' */
+.mo-pinterest-squared:before { content: '\f0d3'; } /* '' */
+.mo-gplus-squared:before { content: '\f0d4'; } /* '' */
+.mo-gplus:before { content: '\f0d5'; } /* '' */
+.mo-linkedin:before { content: '\f0e1'; } /* '' */
+.mo-angle-left:before { content: '\f104'; } /* '' */
+.mo-angle-right:before { content: '\f105'; } /* '' */
+.mo-angle-up:before { content: '\f106'; } /* '' */
+.mo-angle-down:before { content: '\f107'; } /* '' */
+.mo-youtube-squared:before { content: '\f166'; } /* '' */
+.mo-youtube:before { content: '\f167'; } /* '' */
+.mo-xing:before { content: '\f168'; } /* '' */
+.mo-xing-squared:before { content: '\f169'; } /* '' */
+.mo-youtube-play:before { content: '\f16a'; } /* '' */
+.mo-instagram:before { content: '\f16d'; } /* '' */
+.mo-flickr:before { content: '\f16e'; } /* '' */
+.mo-tumblr:before { content: '\f173'; } /* '' */
+.mo-tumblr-squared:before { content: '\f174'; } /* '' */
+.mo-apple:before { content: '\f179'; } /* '' */
+.mo-dribbble:before { content: '\f17d'; } /* '' */
+.mo-skype:before { content: '\f17e'; } /* '' */
+.mo-foursquare:before { content: '\f180'; } /* '' */
+.mo-trello:before { content: '\f181'; } /* '' */
+.mo-vkontakte:before { content: '\f189'; } /* '' */
+.mo-weibo:before { content: '\f18a'; } /* '' */
+.mo-vimeo-squared:before { content: '\f194'; } /* '' */
+.mo-slack:before { content: '\f198'; } /* '' */
+.mo-google:before { content: '\f1a0'; } /* '' */
+.mo-reddit:before { content: '\f1a1'; } /* '' */
+.mo-reddit-squared:before { content: '\f1a2'; } /* '' */
+.mo-stumbleupon-circled:before { content: '\f1a3'; } /* '' */
+.mo-stumbleupon:before { content: '\f1a4'; } /* '' */
+.mo-digg:before { content: '\f1a6'; } /* '' */
+.mo-behance:before { content: '\f1b4'; } /* '' */
+.mo-behance-squared:before { content: '\f1b5'; } /* '' */
+.mo-spotify:before { content: '\f1bc'; } /* '' */
+.mo-deviantart:before { content: '\f1bd'; } /* '' */
+.mo-soundcloud:before { content: '\f1be'; } /* '' */
+.mo-wechat:before { content: '\f1d7'; } /* '' */
+.mo-paper-plane:before { content: '\f1d8'; } /* '' */
+.mo-share:before { content: '\f1e0'; } /* '' */
+.mo-share-squared:before { content: '\f1e1'; } /* '' */
+.mo-yelp:before { content: '\f1e9'; } /* '' */
+.mo-cart-plus:before { content: '\f217'; } /* '' */
+.mo-cart-arrow-down:before { content: '\f218'; } /* '' */
+.mo-facebook-official:before { content: '\f230'; } /* '' */
+.mo-pinterest:before { content: '\f231'; } /* '' */
+.mo-whatsapp:before { content: '\f232'; } /* '' */
+.mo-tripadvisor:before { content: '\f262'; } /* '' */
+.mo-get-pocket:before { content: '\f265'; } /* '' */
+.mo-vimeo:before { content: '\f27d'; } /* '' */
+.mo-google-plus-circle:before { content: '\f2b3'; } /* '' */
+.mo-quora:before { content: '\f2c4'; } /* '' */
+.mo-telegram:before { content: '\f2c6'; } /* '' */
+.mo-podcast:before { content: '\f2ce'; } /* '' */
+.mo-etsy:before { content: '\f2d7'; } /* '' */
+.mo-twitter-squared:before { content: '\f304'; } /* '' */
+.mo-facebook-squared:before { content: '\f308'; } /* '' */
+.mo-linkedin-squared:before { content: '\f30c'; } /* '' */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}

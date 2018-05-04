@@ -24,8 +24,9 @@ $hide_post_slider_cat	= get_theme_mod( 'mode_post_slider_hide_cat', 0 );
 
 	// Arguments
 	$args = array(
-		'post_type' => 'post',
-		'cat' => $moSliderCategory
+		'post_type' 			=> 'post',
+		'cat' 					=> $moSliderCategory,
+		'ignore_sticky_posts' 	=> true
 	);
 
 	// The Query
@@ -37,7 +38,13 @@ $hide_post_slider_cat	= get_theme_mod( 'mode_post_slider_hide_cat', 0 );
 			$the_query->the_post(); ?>
 
 				<a href="<?php the_permalink(); ?>" class="mo-slider_slide">
+					<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail(); ?>
+					<?php else : ?>
+					<div class="mo-slider_slide-placeholder">
+						<i class="mo mo-picture" aria-hidden="true"></i>
+					</div>
+					<?php endif; ?>
 					<div class="slide-overlay">
 						<?php if ( !$hide_post_slider_cat ) : ?>
 						<span class="slide-overlay_category mo-category"><?php mode_get_first_cat_name(); ?></span>

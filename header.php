@@ -89,12 +89,14 @@
 							</div>
 							<div class="col-xs-12 col-lg-2 col-lg-pull-8 social-navigation__wrap">
 								<nav class="social-navigation social-links clearfix">
-									<?php wp_nav_menu( array( 
-										'theme_location' => 'menu-social-header', 
-										'link_before' => '<span class="screen-reader-text">', 
-										'link_after' => '</span>', 
-										'menu_id'        => 'social-header-menu', 
-										'fallback_cb' => false ) ); 
+									<?php 
+										wp_nav_menu( array( 
+											'theme_location' 	=> 'menu-social-header', 
+											'link_before'		=> '<span class="screen-reader-text">', 
+											'link_after' 		=> '</span>', 
+											'menu_id'        	=> 'social-header-menu', 
+											'fallback_cb' 		=> false 
+										) ); 
 									?>
 								</nav>
 							</div>

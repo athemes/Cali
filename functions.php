@@ -137,11 +137,13 @@ add_action( 'widgets_init', 'mode_widgets_init' );
  */
 function mode_scripts() {
 
-	wp_enqueue_style( 'mode-fonts', '//fonts.googleapis.com/css?family=Playfair+Display:400,400i|Work+Sans:300,400,500,600', array(), null );
+	wp_enqueue_style( 'mode-fonts', '//fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Work+Sans:300,400,500,600', array(), null );
 
 	wp_enqueue_style( 'mode-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'mode-font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );
+	wp_dequeue_style('mode-font-awesome');
+
+	wp_enqueue_style( 'mode-icons', get_template_directory_uri() . '/fonts/font-awesome-essential.css' );
 
 	wp_enqueue_script( 'mode-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -208,3 +210,39 @@ if ( class_exists( 'WooCommerce' ) ) {
 require get_template_directory() . '/widgets/class-mode-social.php';
 require get_template_directory() . '/widgets/class-mode-sidebar-posts.php';
 require get_template_directory() . '/widgets/class-mode-author.php';
+
+/**
+ * Recommend plugins
+ */
+require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+
+add_action( 'tgmpa_register', 'mode_recommended_plugins' );
+function mode_recommended_plugins() {
+
+    $plugins[] = array(
+		'name'               => 'Contact Form 7',
+		'slug'               => 'contact-form-7',
+		'required'           => false,
+    );
+
+    $plugins[] = array(
+		'name'               => 'MailChimp for WordPress',
+		'slug'               => 'mailchimp-for-wp',
+		'required'           => false,
+	); 
+	
+	$plugins[] = array(
+		'name'               => 'WP Instagram Widget',
+		'slug'               => 'wp-instagram-widget',
+		'required'           => false,
+	);
+
+    $plugins[] = array(
+		'name'               => 'Kirki',
+		'slug'               => 'kirki',
+		'required'           => false,
+    );      
+
+    tgmpa( $plugins);
+
+}

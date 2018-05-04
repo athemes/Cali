@@ -29,48 +29,57 @@ get_header(); ?>
 				<div class="post-layout post-layout-home <?php echo $postLayout ?>">
 					<?php
 
-					// Arguments
-					$args = array(
-						'post_type' => 'post',
-						'category__not_in' => $moSliderCategory, // excluding posts from Post slider
-					);
+					$postIndex = 0;
+					if (have_posts()) : ?>
+						
+						<?php
+						// The Loop
+						while (have_posts()) : the_post();
 
-					// The Query
-					$the_query = new WP_Query( $args );
-					
-					// The Loop
-					if ( $the_query->have_posts() ) {
-						$postIndex = 0;
-						while ( $the_query->have_posts() ) {
-							$the_query->the_post();
-							
-							if ($postIndex == 0) { ?>
-								<div class="row">
-									<div class="col-md-12">
-										<?php get_template_part( 'template-parts/content', 'post_highlighted' ); ?>
-									</div>
+							// If latest post on page or sticky, use content-post_highlighted and wrap it in .row
+							if ($postIndex == 0) : ?>
+
+							<div class="row">
+								<div class="col-md-12">
+									<?php get_template_part( 'template-parts/content', 'post_highlighted' ); ?>
 								</div>
-								<div class="row"><!-- start of div.row for posts under highlighted post -->
-							<?php
-							} else { 
-							?>
+							</div>
 
-									<div class="<?php echo $postCols ?>">
-										<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-									</div>
+							<div class="row">
+							<?php
+							// else use regular content for all other posts on the page
+							else : ?>
+
+								<div class="<?php echo $postCols ?>">
+									<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+								</div>
 
 							<?php
-							}
-							$postIndex++;
-						}
-					} else {
+							endif;
+
+						$postIndex++;
+
+						endwhile; ?>
+					
+							<div class="col-xs-12">
+								<?php
+								/* Post pagination */
+								the_posts_pagination(); 
+								?>
+							</div>
+					<?php
+					else :
+
 						// no posts found
-					}
+						get_template_part( 'template-parts/content', 'none' );
+
+					endif;
+
 					/* Restore original Post Data */
 					wp_reset_postdata();
 
 					?>
-								</div><!-- end of div.row for posts under highlighted post -->
+							</div><!-- end of div.row for posts under highlighted post -->
 				</div>
 			</section>
 		</main><!-- #main -->

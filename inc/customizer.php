@@ -63,7 +63,6 @@ Mode_Kirki::add_config( 'mode', array(
 ) );
 
 /* Colors */
-
 Mode_Kirki::add_panel( 'mode_colors', array(
     'priority'    => 10,
     'title'       => esc_attr__( 'Colors', 'mode' ),
@@ -113,36 +112,6 @@ Mode_Kirki::add_field( 'mode', array(
         ),
     ),	
 ) );
-// Mode_Kirki::add_field( 'mode', array(
-// 	'type'        => 'color',
-// 	'settings'    => 'mode_links_color',
-// 	'label'       => esc_attr__( 'Body links (anchor tags)', 'mode' ),
-// 	'section'     => 'colors',
-// 	'default'     => '#fb397d',
-// 	'priority'    => 10,
-// 	'transport'	  => 'auto',
-//     'output'      => array(
-//         array(
-//             'element'  => 'a, a:visited',
-//             'property' => 'color',
-//         ),
-//     ),	
-// ) );
-// Mode_Kirki::add_field( 'mode', array(
-// 	'type'        => 'color',
-// 	'settings'    => 'mode_links_hover_color',
-// 	'label'       => esc_attr__( 'Body links hover, focus and active color', 'mode' ),
-// 	'section'     => 'colors',
-// 	'default'     => '#b7b7b7',
-// 	'priority'    => 10,
-// 	'transport'	  => 'auto',
-//     'output'      => array(
-//         array(
-//             'element'  => 'a:hover, a:focus, a:active',
-//             'property' => 'color',
-//         ),
-//     ),	
-// ) );
 Mode_Kirki::add_section( 'mode_header_colors', array(
     'title'          => esc_attr__( 'Header', 'mode' ),
     'panel'          => 'mode_colors',
@@ -391,6 +360,7 @@ Mode_Kirki::add_section( 'mode_post_slider', array(
     'panel'          => '',
     'priority'       => 21,
 ) );
+if ( class_exists( 'Kirki' ) ) {
 Mode_Kirki::add_field( 'mode', array(
     'type'        => 'select',
     'settings'    => 'mode_post_slider_category',
@@ -401,6 +371,7 @@ Mode_Kirki::add_field( 'mode', array(
     'priority'    => 10,
     'choices'     => Kirki_Helper::get_terms( 'category' ),
 ) );
+}
 Mode_Kirki::add_field( 'mode', array(
 	'type'        => 'checkbox',
 	'settings'    => 'mode_post_slider_hide_cat',

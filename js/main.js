@@ -36,31 +36,6 @@
                 });
             } );
             
-            $( '.js-mo-instagram-feed' ).each( function() {
-				$( this ).owlCarousel({
-                    loop: true,
-                    margin: 10,
-                    nav: false,
-                    dots: false,
-                    autoplay: true,
-                    autoplayHoverPause: true,
-                    responsive:{
-                        0:{
-                            items: 3,
-                            margin: 0
-                        },
-                        768:{
-                            items: 4,
-                            margin: 0
-                        },
-                        1200:{
-                            items: 6,
-                            margin: 0
-                        }
-                    }
-                });
-            } );
-            
             // need to add a class to the carousel item so it will be fetched by the carousel script
             // Owl's nestedItemSelector parameter only accepts Class name, in our case it's - 'mo-instagram-feed_el'
             $('.mo-instagram-feed .instagram-pics li').addClass('mo-instagram-feed_el');
@@ -115,7 +90,7 @@
 		// Mobile sub-menus toggle action
 		$( '.main-navigation' ).on( 'click', '.subnav-toggle', function( e ) {
 			e.preventDefault();
-			$( this ).toggleClass( 'open' ).next( '.sub-menu' ).slideToggle();
+			$( this ).toggleClass( 'open' ).next( '.sub-menu, .children' ).slideToggle();
 		} );
     }
 
@@ -134,7 +109,6 @@
 
             // Push mobile menu bellow .header-top
             if ( matchMedia( '(max-width: 1199px)' ).matches ) {
-                $( '.mobile-menu' ).css( 'top', headerHeight );
                 $( '.main-navigation_wrap' ).css( 'top', headerHeight );
 			} else {
                 $( '.main-navigation_wrap' ).css( 'top', 'auto' );

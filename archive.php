@@ -49,13 +49,16 @@ get_header(); ?>
 								</div>
 							<?php
 							endwhile; ?>
+							<div class="col-xs-12">
+								<?php
+								/* Post pagination */
+								the_posts_pagination(); 
+								?>
+							</div>
 						</div>
 					</div>
 
-					<?php
-
-					the_posts_navigation();
-
+				<?php
 				else :
 
 					get_template_part( 'template-parts/content', 'none' );
