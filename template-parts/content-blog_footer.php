@@ -21,7 +21,7 @@
 		<?php foreach($tags as $tag) :  ?>
 
 			<li>
-				<a href="<?php bloginfo('url');?>/tag/<?php print_r($tag->slug);?>">
+				<a href="<?php echo esc_url( home_url() );?>/tag/<?php print_r($tag->slug);?>">
 					<?php print_r($tag->name); ?>
 				</a>   
 			</li>
