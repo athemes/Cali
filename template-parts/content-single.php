@@ -4,14 +4,14 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Mode
+ * @package Cali
  */
 
-$hide_thumb   = get_theme_mod( 'mode_single_hide_thumb', 0 );
-$hide_cats    = get_theme_mod( 'mode_single_hide_cats', 0 );
-$hide_meta	  = get_theme_mod( 'mode_single_hide_meta', 0 );
-$headerLayout = get_theme_mod( 'mode_single_header_layout', 'feat-img--top' );
-$titleAlignment = get_theme_mod( 'mode_single_title_alignment', 'post-title--align-center' );
+$hide_thumb   = get_theme_mod( 'cali_single_hide_thumb', 0 );
+$hide_cats    = get_theme_mod( 'cali_single_hide_cats', 0 );
+$hide_meta	  = get_theme_mod( 'cali_single_hide_meta', 0 );
+$headerLayout = get_theme_mod( 'cali_single_header_layout', 'feat-img--top' );
+$titleAlignment = get_theme_mod( 'cali_single_title_alignment', 'post-title--align-center' );
 
 
 if ( $hide_thumb ) :
@@ -29,7 +29,7 @@ $postClasses = array(
 
         <?php
         if ( ($headerLayout == 'feat-img--top') && !$hide_thumb ) :
-            mode_post_thumbnail();
+            cali_post_thumbnail();
         endif; 
         ?>
 
@@ -37,7 +37,7 @@ $postClasses = array(
 
             <?php if ( !$hide_cats ) : ?>
             <div class="cat-links mo-category">
-                <?php mode_show_cats(); ?>
+                <?php cali_show_cats(); ?>
             </div>
             <?php endif; ?>
 
@@ -45,7 +45,7 @@ $postClasses = array(
 
             <?php if ( !$hide_meta ) : ?>
             <div class="entry-meta">
-                <?php mode_posted_on(); ?>
+                <?php cali_posted_on(); ?>
             </div>
             <?php endif; ?>
 
@@ -53,7 +53,7 @@ $postClasses = array(
 
         <?php
         if ( ($headerLayout == 'post-title--top') && !$hide_thumb ) :
-            mode_post_thumbnail();
+            cali_post_thumbnail();
         endif; 
         ?>
 
@@ -62,7 +62,7 @@ $postClasses = array(
                 the_content( sprintf(
                     wp_kses(
                         /* translators: %s: Name of current post. Only visible to screen readers */
-                        __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mode' ),
+                        __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'cali' ),
                         array(
                             'span' => array(
                                 'class' => array(),
@@ -73,7 +73,7 @@ $postClasses = array(
                 ) );
 
                 wp_link_pages( array(
-                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mode' ),
+                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cali' ),
                     'after'  => '</div>',
                 ) );
             ?>

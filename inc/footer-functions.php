@@ -2,25 +2,25 @@
 /**
  * Footer functions
  *
- * @package Mode
+ * @package Cali
  */
 
 
 /**
  * Footer credits
  */
-function mode_footer_credits() {
+function cali_footer_credits() {
 
 ?>
     <div class="site-info">
         <?php
             /* translators: %s: CMS name, i.e. WordPress. */
-            printf( esc_html__( 'Powered by %s', 'mode' ), '<a href="https://wordpress.org/">WordPress</a>' );
+            printf( esc_html__( 'Powered by %s', 'cali' ), '<a href="https://wordpress.org/">WordPress</a>' );
         ?>
         <span class="sep"> | </span>
         <?php
             /* translators: 1: Theme name, 2: Theme author. */
-            printf( esc_html__( 'Theme: %2$s by %1$s.', 'mode' ), '<a href="https://athemes.com">aThemes</a>', '<a href="https://athemes.com/theme/mode/">Mode</a>' );
+            printf( esc_html__( 'Theme: %2$s by %1$s.', 'cali' ), '<a href="https://athemes.com">aThemes</a>', '<a href="https://athemes.com/theme/cali/">Cali</a>' );
         ?>
     </div><!-- .site-info -->
 <?php	
@@ -29,9 +29,9 @@ function mode_footer_credits() {
 /**
  * Footer output
  */
-function mode_footer_output() {
+function cali_footer_output() {
 	
-	mode_footer_credits();
+	cali_footer_credits();
     
 }
-add_action( 'mode_footer', 'mode_footer_output' );
+add_action( 'cali_footer', 'cali_footer_output' );

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
 $pageType = 'page-no-sidebar';

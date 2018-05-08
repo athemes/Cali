@@ -2412,7 +2412,7 @@
 	};
 
 	/**
-	 * Checks whether an video is currently in full screen mode or not.
+	 * Checks whether an video is currently in full screen cali or not.
 	 * @todo Bad style because looks like a readonly method but changes members.
 	 * @protected
 	 * @returns {Boolean}

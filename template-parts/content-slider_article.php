@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
 
@@ -14,8 +14,8 @@ $moSliderDesktop 		= 4;
 
 $moSliderClasses 		= ' mo-slider-mobile-' . $moSliderMobile . ' mo-slider-tablet-' . $moSliderTablet . ' mo-slider-desktop-' . $moSliderDesktop;
 
-$moSliderCategory		= get_theme_mod( 'mode_post_slider_category' );
-$hide_post_slider_cat	= get_theme_mod( 'mode_post_slider_hide_cat', 0 );
+$moSliderCategory		= get_theme_mod( 'cali_post_slider_category' );
+$hide_post_slider_cat	= get_theme_mod( 'cali_post_slider_hide_cat', 0 );
 
 ?>
 <h1><?php //echo $moSliderCategoryTest; ?></h1>
@@ -47,11 +47,11 @@ $hide_post_slider_cat	= get_theme_mod( 'mode_post_slider_hide_cat', 0 );
 					<?php endif; ?>
 					<div class="slide-overlay">
 						<?php if ( !$hide_post_slider_cat ) : ?>
-						<span class="slide-overlay_category mo-category"><?php mode_get_first_cat_name(); ?></span>
+						<span class="slide-overlay_category mo-category"><?php cali_get_first_cat_name(); ?></span>
 						<?php endif; ?>
 						<?php the_title( '<h2 class="slide-overlay_title">', '</h2>' ); ?>
 						<span class="slide-overlay_meta">
-							<?php mode_posted_on_static(); ?>
+							<?php cali_posted_on_static(); ?>
 						</span>
 					</div>
 				</a>
@@ -60,7 +60,7 @@ $hide_post_slider_cat	= get_theme_mod( 'mode_post_slider_hide_cat', 0 );
 			
 		}
 	} else { ?>
-		<h3><?php _e('Please add posts to the selected slider category in Customizer to populate the Post slider', 'mode'); ?></h3>
+		<h3><?php _e('Please add posts to the selected slider category in Customizer to populate the Post slider', 'cali'); ?></h3>
 	<?php
 	}
 	/* Restore original Post Data */

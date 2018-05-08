@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
 ?>
@@ -16,7 +16,7 @@
 <div class="wc-header-cart__wrap">
     <a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="wc-header-cart__link">
         <i class="mo mo-basket" aria-hidden="true"></i>
-        <span class="screen-reader-text"><?php esc_html_e( 'Cart', 'mode' ); ?></span>
+        <span class="screen-reader-text"><?php esc_html_e( 'Cart', 'cali' ); ?></span>
         <span class="wc-header-cart__cart-count">(<?php echo intval($cart_content); ?>)</span>
     </a>
     <div class="sub-menu wc-cart-mini__wrapper">

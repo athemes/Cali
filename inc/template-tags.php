@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Mode
+ * @package Cali
  */
 
-if ( ! function_exists( 'mode_posted_on' ) ) :
+if ( ! function_exists( 'cali_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function mode_posted_on() {
+	function cali_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -26,13 +26,13 @@ if ( ! function_exists( 'mode_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'mode' ),
+			esc_html_x( '%s', 'post date', 'cali' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'mode' ),
+			esc_html_x( 'by %s', 'post author', 'cali' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -41,11 +41,11 @@ if ( ! function_exists( 'mode_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'mode_posted_on_static' ) ) :
+if ( ! function_exists( 'cali_posted_on_static' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time without the link.
 	 */
-	function mode_posted_on_static() {
+	function cali_posted_on_static() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -60,13 +60,13 @@ if ( ! function_exists( 'mode_posted_on_static' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'mode' ),
+			esc_html_x( '%s', 'post date', 'cali' ),
 			$time_string
 		);
 
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'mode' ),
+			esc_html_x( 'by %s', 'post author', 'cali' ),
 			'<span class="slide-overlay_author">' . esc_html( get_the_author() ) . '</span>'
 		);
 
@@ -75,14 +75,14 @@ if ( ! function_exists( 'mode_posted_on_static' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'mode_posted_by' ) ) :
+if ( ! function_exists( 'cali_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function mode_posted_by() {
+	function cali_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'mode' ),
+			esc_html_x( 'by %s', 'post author', 'cali' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -91,25 +91,25 @@ if ( ! function_exists( 'mode_posted_by' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'mode_entry_footer' ) ) :
+if ( ! function_exists( 'cali_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function mode_entry_footer() {
+	function cali_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'mode' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'cali' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'mode' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'cali' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'mode' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'cali' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'mode' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'cali' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
@@ -119,7 +119,7 @@ if ( ! function_exists( 'mode_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'mode' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'cali' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -136,7 +136,7 @@ if ( ! function_exists( 'mode_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'mode' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'cali' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -151,14 +151,14 @@ if ( ! function_exists( 'mode_entry_footer' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'mode_post_thumbnail' ) ) :
+if ( ! function_exists( 'cali_post_thumbnail' ) ) :
 /**
  * Displays an optional post thumbnail.
  *
  * Wraps the post thumbnail in an anchor element on index views, or a div
  * element when on single views.
  */
-function mode_post_thumbnail() {
+function cali_post_thumbnail() {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
@@ -186,11 +186,11 @@ function mode_post_thumbnail() {
 }
 endif;
 
-if ( ! function_exists( 'mode_show_cats' ) ) :
+if ( ! function_exists( 'cali_show_cats' ) ) :
 /**
  * Prints HTML with meta information for the categories
  */
-function mode_show_cats() {
+function cali_show_cats() {
 	if ( 'post' === get_post_type() ) {
 		$categories_list = get_the_category_list(', ');
 		if ( $categories_list ) {
@@ -204,7 +204,7 @@ endif;
 /**
  * First category
  */
-function mode_get_first_cat() {
+function cali_get_first_cat() {
 	if ( 'post' === get_post_type() ) {
 		$cats = get_the_category();
 		echo '<a href="' . esc_url( get_category_link( $cats[0]->term_id ) ) . '" title="' . esc_attr( $cats[0]->name ) . '" >' . esc_html( $cats[0]->name ) . '</a>';
@@ -214,7 +214,7 @@ function mode_get_first_cat() {
 /**
  * First category name
  */
-function mode_get_first_cat_name() {
+function cali_get_first_cat_name() {
 	if ( 'post' === get_post_type() ) {
 		$cats = get_the_category();
 		echo esc_html( $cats[0]->name );
@@ -224,22 +224,22 @@ function mode_get_first_cat_name() {
 /**
  * Custom read more link
  */
-function mode_read_more_link() {
+function cali_read_more_link() {
 
-	$more = get_theme_mod('mode_custom_read_more_highlighted');
+	$more = get_theme_mod('cali_custom_read_more_highlighted');
   	if ( $more == '' ) {
-    	echo '<a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue Reading', 'mode' ) . '</a>';
+    	echo '<a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue Reading', 'cali' ) . '</a>';
 	} else {
 		echo '<a class="more-link" href="' . get_permalink( get_the_ID() ) . '">' . esc_html( $more ) . '</a>';
 	}
 
-	//echo '<a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue Reading', 'mode' ) . '</a>';
+	//echo '<a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue Reading', 'cali' ) . '</a>';
 }
 
 /**
  * Page title
  */
-function mode_page_title() {
+function cali_page_title() {
 
 	?>
 	<?php if ( is_home() ) : ?>

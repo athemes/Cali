@@ -4,13 +4,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
 ?>
 
 <div class="related-posts">
-    <h3 class="section-title"><?php esc_html_e( 'Related Posts', 'mode' ); ?></h3>
+    <h3 class="section-title"><?php esc_html_e( 'Related Posts', 'cali' ); ?></h3>
     <div class="row">
     <?php
         $prevPost = get_previous_post(true);
@@ -34,11 +34,11 @@
                         </div>
                         <header class="entry-header">
                             <div class="cat-links mo-category">
-                                <?php mode_get_first_cat(); ?>
+                                <?php cali_get_first_cat(); ?>
                             </div>
                             <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                             <div class="entry-meta">
-                                <?php mode_posted_on(); ?>
+                                <?php cali_posted_on(); ?>
                             </div>
                         </header>
                     </article>
@@ -65,11 +65,11 @@
                         </div>
                         <header class="entry-header">
                             <div class="cat-links mo-category">
-                                <?php mode_get_first_cat(); ?>
+                                <?php cali_get_first_cat(); ?>
                             </div>
                             <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                             <div class="entry-meta">
-                                <?php mode_posted_on(); ?>
+                                <?php cali_posted_on(); ?>
                             </div>
                         </header>
                     </article>

@@ -4,20 +4,20 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
-$show_excerpt = get_theme_mod( 'mode_index_excerpt_highlighted', 0 );
-$hide_thumb   = get_theme_mod( 'mode_index_hide_thumb', 0 );
-$hide_cats    = get_theme_mod( 'mode_index_hide_cats', 0 );
-$hide_meta	  = get_theme_mod( 'mode_index_hide_meta', 0 );
+$show_excerpt = get_theme_mod( 'cali_index_excerpt_highlighted', 0 );
+$hide_thumb   = get_theme_mod( 'cali_index_hide_thumb', 0 );
+$hide_cats    = get_theme_mod( 'cali_index_hide_cats', 0 );
+$hide_meta	  = get_theme_mod( 'cali_index_hide_meta', 0 );
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('highlighted-post'); ?>>
     <?php 
         if ( !$hide_thumb ) :
-            mode_post_thumbnail();
+            cali_post_thumbnail();
         endif; 
     ?>
     
@@ -25,7 +25,7 @@ $hide_meta	  = get_theme_mod( 'mode_index_hide_meta', 0 );
 
         <?php if ( !$hide_cats ) : ?>
         <div class="cat-links mo-category">
-            <?php mode_get_first_cat(); ?>
+            <?php cali_get_first_cat(); ?>
         </div>
         <?php endif; ?>
         
@@ -33,7 +33,7 @@ $hide_meta	  = get_theme_mod( 'mode_index_hide_meta', 0 );
 
         <?php if ( !$hide_meta ) : ?>
         <div class="entry-meta">
-            <?php mode_posted_on(); ?>
+            <?php cali_posted_on(); ?>
         </div>
         <?php endif; ?>
 
@@ -46,6 +46,6 @@ $hide_meta	  = get_theme_mod( 'mode_index_hide_meta', 0 );
     <?php endif; ?>
     
     <footer class="entry-footer clearfix">
-        <?php mode_read_more_link(); ?>
+        <?php cali_read_more_link(); ?>
     </footer>
 </article>

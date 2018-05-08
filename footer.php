@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Mode
+ * @package Cali
  */
 
 ?>
@@ -46,7 +46,7 @@
 					) );
 				?>
 			</nav><!-- #site-navigation -->
-			<?php do_action( 'mode_footer' ); ?>
+			<?php do_action( 'cali_footer' ); ?>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -51,14 +51,14 @@ if ( ! class_exists( 'Kirki' ) ) {
 				?>
 				<li id="accordion-section-<?php echo esc_attr( $this->id ); ?>" class="<?php echo esc_attr( $classes ); ?>" style="border-top:none;border-bottom:1px solid #ddd;padding:7px 14px 16px 14px;text-align:right;">
 					<?php if ( ! $installed ) : ?>
-						<p style="text-align:left;margin-top:0;"><?php esc_attr_e( 'A plugin is required to take advantage of this theme\'s features in the customizer.', 'mode' ); ?></p>
-						<a class="install-now button-primary button" data-slug="kirki" href="<?php echo esc_url_raw( $plugin_install_url ); ?>" aria-label="<?php esc_attr_e( 'Install Kirki Toolkit now', 'mode' ); ?>" data-name="Kirki Toolkit">
-							<?php esc_html_e( 'Install Now', 'mode' ); ?>
+						<p style="text-align:left;margin-top:0;"><?php esc_attr_e( 'A plugin is required to take advantage of this theme\'s features in the customizer.', 'cali' ); ?></p>
+						<a class="install-now button-primary button" data-slug="kirki" href="<?php echo esc_url_raw( $plugin_install_url ); ?>" aria-label="<?php esc_attr_e( 'Install Kirki Toolkit now', 'cali' ); ?>" data-name="Kirki Toolkit">
+							<?php esc_html_e( 'Install Now', 'cali' ); ?>
 						</a>
 					<?php else : ?>
-						<p style="text-align:left;margin-top:0;"><?php esc_attr_e( 'You have installed Kirki. Activate it to take advantage of this theme\'s features in the customizer.', 'mode' ); ?></p>
-						<a class="install-now button-secondary button change-theme" data-slug="kirki" href="<?php echo esc_url_raw( self_admin_url( 'plugins.php' ) ); ?>" aria-label="<?php esc_attr_e( 'Activate Kirki Toolkit now', 'mode' ); ?>" data-name="Kirki Toolkit">
-							<?php esc_html_e( 'Activate Now', 'mode' ); ?>
+						<p style="text-align:left;margin-top:0;"><?php esc_attr_e( 'You have installed Kirki. Activate it to take advantage of this theme\'s features in the customizer.', 'cali' ); ?></p>
+						<a class="install-now button-secondary button change-theme" data-slug="kirki" href="<?php echo esc_url_raw( self_admin_url( 'plugins.php' ) ); ?>" aria-label="<?php esc_attr_e( 'Activate Kirki Toolkit now', 'cali' ); ?>" data-name="Kirki Toolkit">
+							<?php esc_html_e( 'Activate Now', 'cali' ); ?>
 						</a>
 					<?php endif; ?>
 				</li>

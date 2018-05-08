@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
 /*
@@ -31,21 +31,21 @@ if ( post_password_required() ) {
 			if ( '1' === $comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One comment on &ldquo;%1$s&rdquo;', 'mode' ),
+					esc_html__( 'One comment on &ldquo;%1$s&rdquo;', 'cali' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				if ( $comment_count < "10" ) {
 					printf( // WPCS: XSS OK.
 						/* translators: 1: comment count number, 2: title. */
-						esc_html( _nx( '0%1$s comment on &ldquo;%2$s&rdquo;', '0%1$s comments on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'mode' ) ),
+						esc_html( _nx( '0%1$s comment on &ldquo;%2$s&rdquo;', '0%1$s comments on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'cali' ) ),
 						number_format_i18n( $comment_count ),
 						'<span>' . get_the_title() . '</span>'
 					);
 				} else {
 					printf( // WPCS: XSS OK.
 						/* translators: 1: comment count number, 2: title. */
-						esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'mode' ) ),
+						esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'cali' ) ),
 						number_format_i18n( $comment_count ),
 						'<span>' . get_the_title() . '</span>'
 					);
@@ -62,7 +62,7 @@ if ( post_password_required() ) {
 					'style'      => 'ul',
 					'short_ping' => true,
 					'avatar_size'=> 70,
-					'callback'	 => 'mode_comment_template'
+					'callback'	 => 'cali_comment_template'
 				) );
 			?>
 		</ul><!-- .comment-list -->
@@ -71,7 +71,7 @@ if ( post_password_required() ) {
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) : ?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'mode' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'cali' ); ?></p>
 		<?php
 		endif;
 
@@ -86,15 +86,15 @@ if ( post_password_required() ) {
 		'title_reply'			=> 'Leave a comment',
 		'fields' 				=> apply_filters( 'comment_form_default_fields', array(
 		'author' 				=> '<p class="comment-form-author">' .
-									'<input id="author" name="author" type="text" placeholder="' . __( 'Name', 'mode' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
+									'<input id="author" name="author" type="text" placeholder="' . __( 'Name', 'cali' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
 		'email'  				=> '<p class="comment-form-email">' .
-		            				'<input id="email" name="email" type="email" placeholder="' . __( 'Email', 'mode' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
+		            				'<input id="email" name="email" type="email" placeholder="' . __( 'Email', 'cali' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
 		'url'    				=> '<p class="comment-form-url">' .
-									'<input id="url" name="url" type="url" placeholder="' . __( 'Website', 'mode' ) .'" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>'
+									'<input id="url" name="url" type="url" placeholder="' . __( 'Website', 'cali' ) .'" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>'
 		)),
-		'comment_field' 		=> '<p class="comment-form-comment"><textarea id="comment" name="comment" placeholder="' . _x( 'Message', 'noun', 'mode' ) . ' *' . '" cols="45" rows="3" maxlength="65525" aria-required="true" required="required"></textarea></p>',
+		'comment_field' 		=> '<p class="comment-form-comment"><textarea id="comment" name="comment" placeholder="' . _x( 'Message', 'noun', 'cali' ) . ' *' . '" cols="45" rows="3" maxlength="65525" aria-required="true" required="required"></textarea></p>',
 		'comment_notes_after' 	=> '',
-		'label_submit'         	=> __( 'Send Message', 'mode' ),
+		'label_submit'         	=> __( 'Send Message', 'cali' ),
 	);
 
 	comment_form($comment_args);

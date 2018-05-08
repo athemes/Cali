@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
-$sidebar = get_theme_mod( 'mode_blog_archives_sidebar' );
+$sidebar = get_theme_mod( 'cali_blog_archives_sidebar' );
 
 if ( !$sidebar ) {
 	$cols = 'col-md-12';
@@ -24,7 +24,7 @@ if ( !$sidebar ) {
 get_header(); ?>
 	<div class="col-md-12">
 		<div class="page-header">
-			<?php mode_page_title(); ?>
+			<?php cali_page_title(); ?>
 		</div>
 	</div>
 	<div id="primary" class="content-area <?php echo $pageLayout ?> <?php echo $cols; ?>">

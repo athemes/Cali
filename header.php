@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Mode
+ * @package Cali
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 <body <?php body_class( 'header-is-sticky' ); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mode' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cali' ); ?></a>
 	<header id="masthead" class="site-header">
 		<div class="header-top clearfix mo-header-shadow--desktop">
 			<div class="container-fluid">
@@ -32,7 +32,7 @@
 							<div class="header-mobile-menu">
 								<button class="mobile-menu-toggle" aria-controls="primary-menu">
 									<span class="mobile-menu-toggle_lines"></span>
-									<span class="sr-only"><?php esc_html_e( 'Toggle mobile menu', 'mode' ); ?></span>
+									<span class="sr-only"><?php esc_html_e( 'Toggle mobile menu', 'cali' ); ?></span>
 								</button>
 							</div>
 						</div><!-- /.header-mobile-menu -->
@@ -45,7 +45,7 @@
 						<div class="col-xs-3 col-sm-2 mo-hide-on-desktop pull-right secondary-navigation__wrap secondary-navigation__wrap--mobile-top">
 							<div class="secondary-navigation">
 								<?php
-								$show_wc_cart = get_theme_mod( 'mode_show_wc_cart', 1 );
+								$show_wc_cart = get_theme_mod( 'cali_show_wc_cart', 1 );
 								
 								if ( class_exists( 'Woocommerce' ) && $show_wc_cart ) :
 

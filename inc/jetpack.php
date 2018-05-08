@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Mode
+ * @package Cali
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function mode_jetpack_setup() {
+function cali_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'mode_infinite_scroll_render',
+		'render'    => 'cali_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -28,7 +28,7 @@ function mode_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details'    => array(
-			'stylesheet' => 'mode-style',
+			'stylesheet' => 'cali-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -42,12 +42,12 @@ function mode_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'mode_jetpack_setup' );
+add_action( 'after_setup_theme', 'cali_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function mode_infinite_scroll_render() {
+function cali_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

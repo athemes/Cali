@@ -103,7 +103,7 @@
  */
 .owl-carousel .animated {
   animation-duration: 1000ms;
-  animation-fill-mode: both; }
+  animation-fill-cali: both; }
 
 .owl-carousel .owl-animated-in {
   z-index: 0; }

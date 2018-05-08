@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
 ?>
@@ -15,8 +15,8 @@
 		if ( class_exists( 'WooCommerce' ) && is_woocommerce() ) :
 
 			// Remove Breadcrumbs on the shop/archive and single product pages if the user selected that option
-			$mode_hide_wc_bc = get_theme_mod('mode_hide_wc_bc', 0);
-			if ( $mode_hide_wc_bc == 0 ) :
+			$cali_hide_wc_bc = get_theme_mod('cali_hide_wc_bc', 0);
+			if ( $cali_hide_wc_bc == 0 ) :
 
 				woocommerce_breadcrumb();
 
@@ -25,9 +25,9 @@
 		elseif ( function_exists('yoast_breadcrumb') ) :
 
 			// Remove Yoast Breadcrumbs on non WooCommerce pages if the user selected that option
-			$mode_hide_yoast_bc = get_theme_mod('mode_hide_yoast_bc', 0);
+			$cali_hide_yoast_bc = get_theme_mod('cali_hide_yoast_bc', 0);
 			
-			if ( $mode_hide_yoast_bc == 0 ) :
+			if ( $cali_hide_yoast_bc == 0 ) :
 
 				yoast_breadcrumb(' <p id="yoast-breadcrumbs">','</p> ');
 

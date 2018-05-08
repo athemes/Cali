@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
 
@@ -16,10 +16,10 @@ $sectionClass = is_404() ? 'error404' : 'no-results';
 		<div class="page-header">
 			<?php
 			if ( is_404() ) { ?>
-				<h1 class="page-header_title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'mode' ); ?></h1>
+				<h1 class="page-header_title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'cali' ); ?></h1>
 			<?php
 			} else { ?>
-				<h1 class="page-header_title"><?php esc_html_e( 'Nothing Found', 'mode' ); ?></h1>
+				<h1 class="page-header_title"><?php esc_html_e( 'Nothing Found', 'cali' ); ?></h1>
 			<?php
 			}
 			?>
@@ -35,7 +35,7 @@ $sectionClass = is_404() ? 'error404' : 'no-results';
 						printf(
 							wp_kses(
 								/* translators: 1: link to WP admin new post page. */
-								__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'mode' ),
+								__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'cali' ),
 								array(
 									'a' => array(
 										'href' => array(),
@@ -48,14 +48,14 @@ $sectionClass = is_404() ? 'error404' : 'no-results';
 
 				<?php elseif ( is_search() ) : ?>
 
-					<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'mode' ); ?></p>
+					<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'cali' ); ?></p>
 					<div class="site-search__wrap site-search__wrap--body">
 						<?php get_search_form(); ?>
 					</div><!-- /.site-search__wrap--body -->
 
 				<?php else : ?>
 
-					<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'mode' ); ?></p>
+					<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'cali' ); ?></p>
 					<div class="site-search__wrap site-search__wrap--body">
 						<?php get_search_form(); ?>
 					</div><!-- /.site-search__wrap--body -->

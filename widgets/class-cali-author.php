@@ -2,14 +2,14 @@
 /**
  * Author widget
  *
- * @package Mode
+ * @package Cali
  */
 
- class Mode_Author extends WP_Widget {
+ class Cali_Author extends WP_Widget {
 
 	function __construct() {
-		$widget_ops = array( 'description' => __('Display your Author image, name and bio', 'mode') );
-		parent::__construct( 'mode-author-widget', __('Mode: Author Profile', 'mode'), $widget_ops );
+		$widget_ops = array( 'description' => __('Display your Author image, name and bio', 'cali') );
+		parent::__construct( 'cali-author-widget', __('Cali: Author Profile', 'cali'), $widget_ops );
 	}
 
 	function widget($args, $instance) {
@@ -50,10 +50,10 @@
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'mode') ?></label>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'cali') ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />
 		</p>
-		<p><em><?php _e('This widget will show the page/post author image, name and bio.', 'mode'); ?></em></p>
+		<p><em><?php _e('This widget will show the page/post author image, name and bio.', 'cali'); ?></em></p>
 		<?php
 	}
 }

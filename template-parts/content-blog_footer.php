@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
 ?>
@@ -13,6 +13,7 @@
 	<?php
 	// get tags by post ID
 	$tags = get_the_tags($post->ID);  ?>
+	
 	<?php
 	
 	if ($tags) { ?>

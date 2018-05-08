@@ -4,12 +4,12 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Mode
+ * @package Cali
  */
 
-$moSliderCategory = get_theme_mod( 'mode_post_slider_category');
+$moSliderCategory = get_theme_mod( 'cali_post_slider_category');
 
-$sidebar = get_theme_mod( 'mode_blog_home_sidebar' );
+$sidebar = get_theme_mod( 'cali_blog_home_sidebar' );
 
 $postLayout = 'post-layout-columns-2';
 $postCols = 'col-sm-6 col-md-6';

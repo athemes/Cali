@@ -4,25 +4,25 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
-$show_excerpt = get_theme_mod( 'mode_index_excerpt_regular', 0 );
-$hide_thumb   = get_theme_mod( 'mode_index_hide_thumb', 0 );
-$hide_cats    = get_theme_mod( 'mode_index_hide_cats', 0 );
-$hide_meta	  = get_theme_mod( 'mode_index_hide_meta', 0 );
+$show_excerpt = get_theme_mod( 'cali_index_excerpt_regular', 0 );
+$hide_thumb   = get_theme_mod( 'cali_index_hide_thumb', 0 );
+$hide_cats    = get_theme_mod( 'cali_index_hide_cats', 0 );
+$hide_meta	  = get_theme_mod( 'cali_index_hide_meta', 0 );
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('regular-post'); ?>>
 
-	<?php mode_post_thumbnail(); ?>
+	<?php cali_post_thumbnail(); ?>
 
 	<header class="entry-header">
 
 		<?php if ( !$hide_cats ) : ?>
         <div class="cat-links mo-category">
-            <?php mode_get_first_cat(); ?>
+            <?php cali_get_first_cat(); ?>
         </div>
 		<?php endif; ?>
 		
@@ -30,7 +30,7 @@ $hide_meta	  = get_theme_mod( 'mode_index_hide_meta', 0 );
 
 		<?php if ( !$hide_meta ) : ?>
         <div class="entry-meta">
-            <?php mode_posted_on(); ?>
+            <?php cali_posted_on(); ?>
         </div>
         <?php endif; ?>
 

@@ -1,7 +1,7 @@
-=== Mode ===
+=== Cali ===
 
-Mode WordPress Theme, Copyright 2018 athemes
-Mode is distributed under the terms of the GNU GPL v3
+Cali WordPress Theme, Copyright 2018 athemes
+Cali is distributed under the terms of the GNU GPL v3
 
 Contributors: athemes
 Tags: blog, two-columns, right-sidebar, custom-colors, custom-background, custom-header, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Mode is a modern theme designed with fashion blogs in mind. It features a posts carousel, awesome typography, various theme options you can use to customize the look of your site and much more.
+Cali is a calirn theme designed with fashion blogs in mind. It features a posts carousel, awesome typography, various theme options you can use to customize the look of your site and much more.
 
 == Installation ==
 
@@ -26,7 +26,7 @@ Mode is a modern theme designed with fashion blogs in mind. It features a posts 
 
 = Does this theme support any plugins? =
 
-Mode includes support for WooCommerce.
+Cali includes support for WooCommerce.
 
 == Changelog ==
 

@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Mode
+ * @package Cali
  */
 
-$sidebar = get_theme_mod( 'mode_blog_single_sidebar' );
+$sidebar = get_theme_mod( 'cali_blog_single_sidebar' );
 
 if ( !$sidebar ) {
 	$cols = 'col-md-8 col-md-offset-2';

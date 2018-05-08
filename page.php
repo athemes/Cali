@@ -9,10 +9,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Mode
+ * @package Cali
  */
 
-$sidebar = get_theme_mod( 'mode_blog_single_sidebar' );
+$sidebar = get_theme_mod( 'cali_blog_single_sidebar' );
 $sidebar = true;
 
 if ( !$sidebar ) {

@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package Mode
+ * @package Cali
  */
 
 /**
@@ -11,7 +11,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function mode_body_classes( $classes ) {
+function cali_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
@@ -19,22 +19,22 @@ function mode_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'mode_body_classes' );
+add_filter( 'body_class', 'cali_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function mode_pingback_header() {
+function cali_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'mode_pingback_header' );
+add_action( 'wp_head', 'cali_pingback_header' );
 
 /**
  * Single comment template
  */
-function mode_comment_template($comment, $args, $depth) {
+function cali_comment_template($comment, $args, $depth) {
 
 	?>
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( $comment->has_children ? 'parent' : '' ); ?>>
@@ -51,25 +51,25 @@ function mode_comment_template($comment, $args, $depth) {
 						<time datetime="<?php comment_time( 'c' ); ?>">
 							<?php
 								/* translators: 1: comment date, 2: comment time */
-								printf( __( '%1$s at %2$s', 'mode' ), get_comment_date( '', $comment ), get_comment_time() );
+								printf( __( '%1$s at %2$s', 'cali' ), get_comment_date( '', $comment ), get_comment_time() );
 							?>
 						</time>
 					</span><!-- .comment-metadata -->
 					<a class="comment-href" href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
-						<span class="sr-only"><?php _e( 'Direct link to comment', 'mode' ); ?></span>
+						<span class="sr-only"><?php _e( 'Direct link to comment', 'cali' ); ?></span>
 						<i class="mo mo-link" aria-hidden="true"></i>
 					</a>
 				</header><!-- .comment-meta -->
 
 				<div class="comment-content">
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-					<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'mode' ); ?></p>
+					<p class="comment-awaiting-caliration"><?php _e( 'Your comment is awaiting caliration.', 'cali' ); ?></p>
 					<?php endif; ?>
 
 					<?php comment_text(); ?>
 				</div><!-- .comment-content -->
 				<footer class="comment-links">
-					<?php edit_comment_link( __( 'Edit', 'mode' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_comment_link( __( 'Edit', 'cali' ), '<span class="edit-link">', '</span>' ); ?>
 					<?php
 					comment_reply_link( array_merge( $args, array(
 						'add_below' => 'div-comment',
@@ -88,43 +88,43 @@ function mode_comment_template($comment, $args, $depth) {
 /**
  * Move comment textarea to bottom.
  */
-function mode_move_comment_field_to_bottom( $fields ) {
+function cali_move_comment_field_to_bottom( $fields ) {
 	$comment_field = $fields['comment'];
 	unset( $fields['comment'] );
 	$fields['comment'] = $comment_field;
 	return $fields;
 } 
-add_filter( 'comment_form_fields', 'mode_move_comment_field_to_bottom' );
+add_filter( 'comment_form_fields', 'cali_move_comment_field_to_bottom' );
 
 /**
  * Excerpt length
  */
-function mode_excerpt_length( $length ) {
+function cali_excerpt_length( $length ) {
 
 	if ( is_admin() ) {
 		return $length;
 	}
 
-	$excerpt = get_theme_mod('mode_exc_length', '20');
+	$excerpt = get_theme_mod('cali_exc_length', '20');
 	return $excerpt;
 }
-add_filter( 'excerpt_length', 'mode_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'cali_excerpt_length', 999 );
 
 /**
  * Excerpt read more
  * We are using a custom Read more position for highlighted posts
  */
-function mode_custom_excerpt( $more ) {
+function cali_custom_excerpt( $more ) {
 
 	if ( is_admin() ) {
 		return $more;
 	}
 
-	$more = get_theme_mod('mode_custom_read_more_regular');
+	$more = get_theme_mod('cali_custom_read_more_regular');
   	if ( $more == '' ) {
     	return '<span class="read-more">[&hellip;]</span>';
 	} else {
 		return ' <a class="read-more" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . esc_html( $more ) . '</a>';
 	}
 }
-add_filter( 'excerpt_more', 'mode_custom_excerpt' );
+add_filter( 'excerpt_more', 'cali_custom_excerpt' );

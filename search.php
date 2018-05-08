@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Mode
+ * @package Cali
  */
 
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
 			<div class="page-header">
 				<h1 class="page-header_title"><?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'mode' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Search Results for: %s', 'cali' ), '<span>' . get_search_query() . '</span>' );
 				?></h1>
 			</div>
 		</div>

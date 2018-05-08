@@ -7,7 +7,7 @@
         $body = $( 'body' );
 
     // owlCarousel
-	function modeOwlCarousel() {
+	function caliOwlCarousel() {
         if ( $.fn.owlCarousel ) {
             
             // Article Carousel/Slider
@@ -118,7 +118,7 @@
 
     /* Function init */
 	$doc.ready( function() {
-        modeOwlCarousel();
+        caliOwlCarousel();
         mobileMenu();
         headerHeightTweaks();
 	} );

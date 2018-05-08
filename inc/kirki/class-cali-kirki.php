@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * ensuring that all CSS & fonts still work.
  * It does not handle the customizer options, simply the frontend CSS.
  */
-class Mode_Kirki {
+class Cali_Kirki {
 
 	/**
 	 * The config ID.
@@ -416,4 +416,4 @@ class Mode_Kirki {
 		}
 	}
 }
-new Mode_Kirki();
+new Cali_Kirki();
