@@ -231,7 +231,7 @@ Cali_Kirki::add_field( 'cali', array(
 	'settings'    => 'cali_index_excerpt_highlighted',
 	'label'       => esc_attr__( 'Show post excerpts on the highlighted post?', 'cali' ),
 	'section'     => 'cali_blog_archives',
-	'default'     => '0',
+	'default'     => '1',
 	'priority'    => 10,
 ) );
 Cali_Kirki::add_field( 'cali', array(

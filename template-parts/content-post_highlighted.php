@@ -7,7 +7,7 @@
  * @package Cali
  */
 
-$show_excerpt = get_theme_mod( 'cali_index_excerpt_highlighted', 0 );
+$show_excerpt = get_theme_mod( 'cali_index_excerpt_highlighted', 1 );
 $hide_thumb   = get_theme_mod( 'cali_index_hide_thumb', 0 );
 $hide_cats    = get_theme_mod( 'cali_index_hide_cats', 0 );
 $hide_meta	  = get_theme_mod( 'cali_index_hide_meta', 0 );
