@@ -30,14 +30,14 @@ get_header(); ?>
 					<?php
 
 					$postIndex = 0;
-					if (have_posts()) : ?>
+					if ( have_posts() ) : ?>
 						
 						<?php
 						// The Loop
 						while (have_posts()) : the_post();
 
 							// If latest post on page or sticky, use content-post_highlighted and wrap it in .row
-							if ($postIndex == 0) : ?>
+							if ( $postIndex == 0 && !is_paged() ) : ?>
 
 							<div class="row">
 								<div class="col-md-12">
