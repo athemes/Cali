@@ -202,11 +202,7 @@ class Cali_Kirki {
 
 		// If we have some styles to add, add them now.
 		if ( ! empty( $styles ) ) {
-
-			// Enqueue the theme's style.css file.
-			$current_theme = ( wp_get_theme() );
-			wp_enqueue_style( $current_theme->stylesheet . '_no-kirki', get_stylesheet_uri(), null, null );
-			wp_add_inline_style( $current_theme->stylesheet . '_no-kirki', $styles );
+			wp_add_inline_style( 'cali-style', $styles );
 		}
 	}
 
