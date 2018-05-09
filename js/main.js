@@ -116,11 +116,17 @@
         }
     }
 
+    //Fitvids
+    function initFitvids() {
+        $( 'body' ).fitVids();
+    }    
+
     /* Function init */
 	$doc.ready( function() {
         caliOwlCarousel();
         mobileMenu();
         headerHeightTweaks();
+        initFitvids();
 	} );
 
 	$win.load( function() {
