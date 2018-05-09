@@ -43,7 +43,7 @@
             $( '.js-mo-widget-instagram-feed' ).each( function() {
 				$( this ).owlCarousel({
                     nestedItemSelector: 'mo-instagram-feed_el',
-                    loop: true,
+                    loop: false,
                     margin: 10,
                     nav: false,
                     dots: false,
