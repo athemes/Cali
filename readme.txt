@@ -38,6 +38,8 @@ Cali includes support for WooCommerce.
 * Based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Bootstrap http://getbootstrap.com/, (C) 2011-2018 Twitter, Inc, [MIT](http://opensource.org/licenses/MIT)
 * Owl Carousel http://owlgraphic.com/owlcarousel/ ,(C) Bartosz Wojciechowski, [MIT](http://opensource.org/licenses/MIT)
+* FitVids http://fitvidsjs.com/ ,(C) Chris Coyier, Paravel, [WTFPL](http://www.wtfpl.net/txt/copying/)
+* FontAwesome http://fontawesome.io/ ,(C) Dave Gandy, [SIL](https://scripts.sil.org/OFL?)
 * Screenshot image https://www.pexels.com/photo/selective-focus-photo-of-man-wearing-black-turtleneck-top-with-jacket-on-road-837140/, (C) Bruce Mars, [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/)
 * Screenshot image https://pixabay.com/en/fashion-beautiful-woman-woman-hat-2309519/, (C) 1643606, [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/)
 * Screenshot image https://www.pexels.com/photo/man-wearing-a-red-sweater-leaning-on-a-blue-wall-845413/, (C) Bruce Mars, [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/)
