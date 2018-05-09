@@ -128,3 +128,24 @@ function cali_custom_excerpt( $more ) {
 	}
 }
 add_filter( 'excerpt_more', 'cali_custom_excerpt' );
+
+/**
+ * Remove labels from archives
+ */
+function cali_remove_archive_labels( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax() ) {
+        $title = single_term_title( '', false );
+    }
+  
+    return $title;
+}
+ 
+add_filter( 'get_the_archive_title', 'cali_remove_archive_labels' );
