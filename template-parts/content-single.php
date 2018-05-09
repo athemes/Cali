@@ -11,7 +11,7 @@ $hide_thumb   = get_theme_mod( 'cali_single_hide_thumb', 0 );
 $hide_cats    = get_theme_mod( 'cali_single_hide_cats', 0 );
 $hide_meta	  = get_theme_mod( 'cali_single_hide_meta', 0 );
 $headerLayout = get_theme_mod( 'cali_single_header_layout', 'feat-img--top' );
-$titleAlignment = get_theme_mod( 'cali_single_title_alignment', 'post-title--align-center' );
+$titleAlignment = get_theme_mod( 'cali_single_title_alignment', 'post-title--align-left' );
 
 
 if ( $hide_thumb ) :

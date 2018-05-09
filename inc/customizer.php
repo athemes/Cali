@@ -299,7 +299,7 @@ Cali_Kirki::add_field( 'cali', array(
 	'settings'    => 'cali_blog_single_sidebar',
 	'label'       => esc_attr__( 'Show sidebar on single blog post?', 'cali' ),
 	'section'     => 'cali_blog_singles',
-	'default'     => '0',
+	'default'     => '1',
 	'priority'    => 10,
 ) );
 Cali_Kirki::add_field( 'cali', array(
@@ -344,7 +344,7 @@ Cali_Kirki::add_field( 'cali', array(
 	'settings'    => 'cali_single_title_alignment',
 	'label'       => esc_attr__( 'Blog post title alignment?', 'cali' ),
 	'section'     => 'cali_blog_singles',
-	'default'     => 'post-title--align-center',
+	'default'     => 'post-title--align-left',
 	'priority'    => 10,
 	'multiple'    => 1,
 	'choices'     => array(

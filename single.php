@@ -7,7 +7,7 @@
  * @package Cali
  */
 
-$sidebar = get_theme_mod( 'cali_blog_single_sidebar' );
+$sidebar = get_theme_mod( 'cali_blog_single_sidebar', 1 );
 
 if ( !$sidebar ) {
 	$cols = 'col-md-8 col-md-offset-2';
