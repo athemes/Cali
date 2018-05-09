@@ -894,7 +894,7 @@ table {
 .mo-instagram-feed--widget .mo-instagram-feed_el p a::before {
 	content: "\f16d";
 	display: inline-block;
-	font-family: "font-awesome-essential";
+	font-family: 'FontAwesome';
 	font-size: inherit;
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
@@ -1314,7 +1314,7 @@ form h4 {
 	background: none;
 	border: none;
 	color: #404040;
-	font-family: "font-awesome-essential";
+	font-family: 'FontAwesome';
 	text-align: center;
 }
 
@@ -1906,7 +1906,7 @@ a:hover, a:active {
 		content: "\f107";
 		display: inline-block;
 		color: inherit;
-		font-family: "font-awesome-essential";
+		font-family: 'FontAwesome';
 		font-size: 30px;
 		line-height: 2;
 		speak: none;
@@ -2043,7 +2043,7 @@ a:hover, a:active {
 .social-links a::before,
 .social-widget li a::before,
 .social-menu-widget a:before {
-	font-family: "font-awesome-essential";
+	font-family: 'FontAwesome';
 	color: inherit;
 	-webkit-backface-visibility: visible;
 	backface-visibility: visible;
@@ -2272,7 +2272,7 @@ a:hover, a:active {
 #yoast-breadcrumbs > span > span > a::before,
 .woocommerce .woocommerce-breadcrumb > a:first-child::before { /* targeting first breadcrumb link */
 	content: "\e805";
-	font-family: "font-awesome-essential";
+	font-family: 'FontAwesome';
 	font-size: 16px;
 	display: inline-block;
 	padding-right: 5px;

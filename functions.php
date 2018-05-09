@@ -142,7 +142,7 @@ function cali_scripts() {
 	wp_enqueue_style( 'cali-style', get_stylesheet_uri() );
 
 	if ( !class_exists( 'Kirki' ) ) {
-		wp_enqueue_style( 'cali-icons', get_template_directory_uri() . '/fonts/font-awesome-essential.css' );
+		wp_enqueue_style( 'cali-icons', get_template_directory_uri() . '/fonts/fontawesome.min.css' );
 	}
 
 	wp_enqueue_script( 'cali-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
