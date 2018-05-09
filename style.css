@@ -2271,7 +2271,7 @@ a:hover, a:active {
 
 #yoast-breadcrumbs > span > span > a::before,
 .woocommerce .woocommerce-breadcrumb > a:first-child::before { /* targeting first breadcrumb link */
-	content: "\e805";
+	content: "\f015";
 	font-family: 'FontAwesome';
 	font-size: 16px;
 	display: inline-block;
