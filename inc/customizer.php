@@ -215,7 +215,7 @@ Cali_Kirki::add_field( 'cali', array(
 	'settings'    => 'cali_blog_home_sidebar',
 	'label'       => esc_attr__( 'Show sidebar on blog index/home?', 'cali' ),
 	'section'     => 'cali_blog_archives',
-	'default'     => '0',
+	'default'     => '1',
 	'priority'    => 10,
 ) );
 Cali_Kirki::add_field( 'cali', array(

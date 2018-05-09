@@ -9,7 +9,7 @@
 
 $moSliderCategory = get_theme_mod( 'cali_post_slider_category');
 
-$sidebar = get_theme_mod( 'cali_blog_home_sidebar' );
+$sidebar = get_theme_mod( 'cali_blog_home_sidebar', 1 );
 
 $postLayout = 'post-layout-columns-2';
 $postCols = 'col-sm-6 col-md-6';
