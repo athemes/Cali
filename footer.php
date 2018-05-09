@@ -29,7 +29,7 @@
 					wp_nav_menu( array(
 						'theme_location' => 'menu-social-footer',
 						'menu_id'        => 'social-footer-menu',
-						'fallback_cb'	 => false 
+						'fallback_cb'	 => false,
 					) );
 				?>
 			</nav>
@@ -43,6 +43,7 @@
 					wp_nav_menu( array(
 						'theme_location' => 'footer-menu',
 						'menu_id'        => 'footer-menu',
+						'depth'			 => 1
 					) );
 				?>
 			</nav><!-- #site-navigation -->
