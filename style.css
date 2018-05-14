@@ -2900,6 +2900,7 @@ a:hover, a:active {
 	border-radius: 2px;
 	font-size: 12px;
 	text-transform: uppercase;
+	text-align: center;
 	color: #404040;
 	line-height: 14px;
 	transition: color 0.2s ease-in, background-color 0.2s ease-in;
