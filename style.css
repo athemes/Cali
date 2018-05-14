@@ -686,6 +686,7 @@ table {
 .site-title,
 .site-title--footer,
 .site-title--mobile {
+	font-family: 'Playfair Display', serif;
 	line-height: 1;
 	margin: 0;
 	text-transform: uppercase;
@@ -716,6 +717,10 @@ table {
 .site-title--mobile a:hover,
 .site-title--mobile a:focus {
 	color: #fb397d;
+}
+
+.site-description {
+	margin: 0;
 }
 
 .page-header {
