@@ -1084,6 +1084,10 @@ form h4 {
 	display: inline-block;
 }
 
+.site-search {
+	margin-top: 0;
+}
+
 .site-search__wrap input,
 .site-search__wrap button,
 .widget_search .site-search input,
