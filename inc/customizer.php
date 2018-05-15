@@ -222,7 +222,7 @@ if ( class_exists( 'Kirki_Fonts' ) ) {
 		'transport'	  => 'refresh',
 	    'output'      => array(
 	        array(
-	            'element'  => '.test-heading,.font-family--1,h1,h2,h3,h4,h5,h6,blockquote,cite,.more-link,.entry-meta .author,.byline .author,.byline em,.entry-meta .author a.url,.dropcap::first-letter,.site-title,.site-title--footer,.site-title--mobile.site-search__wrap .site-search_input,.widget_search .site-search .site-search_input,.author_name,.comment-author,.page-author_name,.slide-overlay_author',
+	            'element'  => '.font-family--1,h1,h2,h3,h4,h5,h6,blockquote,cite,.more-link,.entry-meta .author,.byline .author,.byline em,.entry-meta .author a.url,.dropcap::first-letter,.site-title,.site-title--footer,.site-title--mobile.site-search__wrap .site-search_input,.widget_search .site-search .site-search_input,.author_name,.comment-author,.page-author_name,.slide-overlay_author',
 	            'property' => 'font-family',
 	        ),
 	    ),	
@@ -239,7 +239,7 @@ if ( class_exists( 'Kirki_Fonts' ) ) {
 		'transport'	  => 'refresh',
 	    'output'      => array(
 	        array(
-	            'element'  => '.test-body,.font-family--2,body,button,input,select,optgroup,textarea,.mo-category,.page-header_subtitle,.shop-overlay_subtitle',
+	            'element'  => '.font-family--2,body,button,input,select,optgroup,textarea,.mo-category,.page-header_subtitle,.shop-overlay_subtitle',
 	            'property' => 'font-family',
 	        ),
 	    ),	
