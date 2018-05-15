@@ -30,29 +30,36 @@ get_header(); ?>
 					<?php
 
 					$postIndex = 0;
-					if ( have_posts() ) : ?>
-						
-						<?php
+					if ( have_posts() ) :
+
+						// If the page is "paged" place div.row opening tag - used as post wrapper
+						// else the opening tag is placed after the highlighted/sticky post on line #59
+						if ( is_paged() ) :
+						?>
+								<div class="row">
+						<?php 
+						endif;
+
 						// The Loop
 						while (have_posts()) : the_post();
 
 							// If latest post on page or sticky, use content-post_highlighted and wrap it in .row
 							if ( $postIndex == 0 && !is_paged() ) : ?>
 
-							<div class="row">
-								<div class="col-md-12">
-									<?php get_template_part( 'template-parts/content', 'post_highlighted' ); ?>
+								<div class="row">
+									<div class="col-md-12">
+										<?php get_template_part( 'template-parts/content', 'post_highlighted' ); ?>
+									</div>
 								</div>
-							</div>
 
-							<div class="row">
+								<div class="row">
 							<?php
 							// else use regular content for all other posts on the page
 							else : ?>
 
-								<div class="<?php echo $postCols ?>">
-									<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-								</div>
+									<div class="<?php echo $postCols ?>">
+										<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+									</div>
 
 							<?php
 							endif;
@@ -61,12 +68,12 @@ get_header(); ?>
 
 						endwhile; ?>
 					
-							<div class="col-xs-12">
-								<?php
-								/* Post pagination */
-								the_posts_pagination(); 
-								?>
-							</div>
+								<div class="col-xs-12">
+									<?php
+									/* Post pagination */
+									the_posts_pagination(); 
+									?>
+								</div>
 					<?php
 					else :
 
@@ -79,7 +86,7 @@ get_header(); ?>
 					wp_reset_postdata();
 
 					?>
-							</div><!-- end of div.row for posts under highlighted post -->
+								</div><!-- end of div.row for posts under highlighted post -->
 				</div>
 			</section>
 		</main><!-- #main -->
