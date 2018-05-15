@@ -146,14 +146,14 @@ blockquote {
 	padding: 5px 25px 8px;
 	border-left: 2px solid #fb397d;
 	font-style: italic;
-	font-size: 18px;
+	font-size: 1.125rem;
 	line-height: 1.667;
 	font-family: 'Playfair Display', serif;
 }
 
 cite {
 	color: #a6a6a6;
-	font-size: 14px;
+	font-size: 0.875rem;
 	display: block;
 	text-transform: uppercase;
 	font-family: 'Playfair Display', serif;
@@ -329,14 +329,6 @@ figcaption {
 	}
 	
 	h6 {
-		font-size: 12px;
-	}
-
-	blockquote {
-		font-size: 16px;
-	}
-
-	cite {
 		font-size: 12px;
 	}
 
@@ -1442,6 +1434,7 @@ a:hover, a:active {
 .wc-header-cart__link {
 	display: block;
 	line-height: 36px;
+	font-size: 14px;
 	text-align: center;
 	position: relative;
 }
@@ -1832,6 +1825,7 @@ a:hover, a:active {
 
 .social-navigation li a {
 	padding: 0px 10px;
+	font-size: 14px;
 	line-height: 36px;
 	display: inline-block;
 }
@@ -1844,7 +1838,7 @@ a:hover, a:active {
 .social-menu-widget a {
 	text-decoration: none;
 	padding: 5px 10px;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .social-links a::before,
