@@ -57,7 +57,7 @@ function cali_comment_template($comment, $args, $depth) {
 					</span><!-- .comment-metadata -->
 					<a class="comment-href" href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
 						<span class="sr-only"><?php _e( 'Direct link to comment', 'cali' ); ?></span>
-						<i class="mo mo-link" aria-hidden="true"></i>
+						<i class="fas fa-link" aria-hidden="true"></i>
 					</a>
 				</header><!-- .comment-meta -->
 

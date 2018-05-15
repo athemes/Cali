@@ -172,7 +172,7 @@ Cali_Kirki::add_field( 'cali', array(
 	'transport'	  => 'auto',
     'output'      => array(
         array(
-            'element'  => '.main-navigation ul li a, .secondary-navigation .site-search_submit, .wc-header-cart__link, .header-top .social-navigation a',
+            'element'  => '.main-navigation ul li a, .secondary-navigation .site-search_submit, .wc-header-cart__wrap .wc-header-cart__link, .header-top .social-navigation a',
             'property' => 'color',
         ),
     ),	
