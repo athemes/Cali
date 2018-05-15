@@ -140,3 +140,5 @@
 		?>
 		<div class="container clearfix"><!-- ends in footer.php -->
 			<div class="row"><!-- ends in footer.php -->
+<h1 class="test-heading">Test heading</h1>
+<h2 class="test-body">Test body</h2>

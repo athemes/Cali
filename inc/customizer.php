@@ -198,6 +198,54 @@ Cali_Kirki::add_field( 'cali', array(
     ),	
 ) );
 
+/* Typography */
+Cali_Kirki::add_panel( 'cali_typography', array(
+    'priority'    => 21,
+    'title'       => esc_attr__( 'Typography', 'cali' ),
+) );
+Cali_Kirki::add_section( 'cali_font_families', array(
+    'title'          => esc_attr__( 'Font families', 'cali' ),
+    'priority'       => 31,
+    'panel'			 => 'cali_typography'
+) );
+
+if ( class_exists( 'Kirki_Fonts' ) ) {
+	Cali_Kirki::add_field( 'cali', array(
+		'type'        => 'select',
+		'settings'    => 'cali_headings_font',
+		'label'       => __( 'Headings font', 'cali' ),
+		'section'     => 'cali_font_families',
+		'default'     => 'Playfair Display',
+		'priority'    => 10,
+		'multiple'    => 1,
+		'choices'     => Kirki_Fonts::get_font_choices(),
+		'transport'	  => 'refresh',
+	    'output'      => array(
+	        array(
+	            'element'  => '.test-heading,.font-family--1,h1,h2,h3,h4,h5,h6,blockquote,cite,.more-link,.entry-meta .author,.byline .author,.byline em,.entry-meta .author a.url,.dropcap::first-letter,.site-title,.site-title--footer,.site-title--mobile.site-search__wrap .site-search_input,.widget_search .site-search .site-search_input,.author_name,.comment-author,.page-author_name,.slide-overlay_author',
+	            'property' => 'font-family',
+	        ),
+	    ),	
+	) );
+	Cali_Kirki::add_field( 'cali', array(
+		'type'        => 'select',
+		'settings'    => 'cali_body_font',
+		'label'       => __( 'Body font', 'cali' ),
+		'section'     => 'cali_font_families',
+		'default'     => 'Work Sans',
+		'priority'    => 11,
+		'multiple'    => 1,
+		'choices'     => Kirki_Fonts::get_font_choices(),
+		'transport'	  => 'refresh',
+	    'output'      => array(
+	        array(
+	            'element'  => '.test-body,.font-family--2,body,button,input,select,optgroup,textarea,.mo-category,.page-header_subtitle,.shop-overlay_subtitle',
+	            'property' => 'font-family',
+	        ),
+	    ),	
+	) );
+}
+
 /* Blog options */
 Cali_Kirki::add_panel( 'cali_blog_panel', array(
     'priority'    => 21,
