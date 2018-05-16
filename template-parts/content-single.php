@@ -85,8 +85,7 @@ $postClasses = array(
                 <ul class="single-post_tags">
                     <?php the_tags( '<li>', '</li><li>', '</li>' ); ?>
                 </ul>
-            <?php else :
-                // Article untagged
+            <?php
             endif;
             ?>
         </footer><!-- .entry-footer -->
