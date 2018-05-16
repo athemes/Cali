@@ -100,7 +100,7 @@
             var headerHeight = $( '.header-top' ).outerHeight();
             
             // If the header is sticky add top padding on main header to compensate
-            // If it's not or the user resized screen to a smaller width where the header is static -> remove top padding
+            // If it's not or the user resized the screen to a smaller width where the header is static -> remove top padding
             if ( $('.header-is-sticky').length ) {
                 $('.header-is-sticky .site-header').css( 'padding-top', headerHeight );
             } else {
@@ -109,7 +109,15 @@
 
             // Push mobile menu bellow .header-top
             if ( matchMedia( '(max-width: 1199px)' ).matches ) {
-                $( '.main-navigation_wrap' ).css( 'top', headerHeight );
+
+                // Check if WordPress Admin bar is present and accomodate the extra spacing by pushing the mobile menu futher bellow
+                if ( $('#wpadminbar').length ) {
+                    var wpadminbarHeight = $( '#wpadminbar' ).outerHeight();
+                    $( '.main-navigation_wrap' ).css( 'top', headerHeight + wpadminbarHeight );
+                } else {
+                    $( '.main-navigation_wrap' ).css( 'top', headerHeight );
+                }
+
 			} else {
                 $( '.main-navigation_wrap' ).css( 'top', 'auto' );
             }
