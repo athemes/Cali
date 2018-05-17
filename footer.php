@@ -36,7 +36,7 @@
 			<div class="site-branding--footer">
 				<?php
 				the_custom_logo(); ?>
-				<h1 class="site-title--footer"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<p class="site-title--footer"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			</div><!-- .site-branding -->
 			<nav class="footer-navigation clearfix">
 				<?php

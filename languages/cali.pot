@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cali\n"
-"POT-Creation-Date: 2018-05-04 13:13+0200\n"
+"POT-Creation-Date: 2018-05-15 21:45+0200\n"
 "PO-Revision-Date: 2018-05-02 22:44+0200\n"
 "Last-Translator: \n"
 "Language-Team: aThemes athemes.com\n"
@@ -480,7 +480,7 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/customizer.php:19 inc/customizer.php:392
+#: inc/customizer.php:19 inc/customizer.php:550
 msgid "General"
 msgstr ""
 
@@ -525,170 +525,223 @@ msgid "Footer background"
 msgstr ""
 
 #: inc/customizer.php:204
-msgid "Blog"
+msgid "Typography"
 msgstr ""
 
-#: inc/customizer.php:209
-msgid "Index/Archives"
+#: inc/customizer.php:207
+msgid "Font families"
 msgstr ""
 
 #: inc/customizer.php:216
-msgid "Show sidebar on blog index/home?"
+msgid "Headings font"
 msgstr ""
 
-#: inc/customizer.php:224
-msgid "Show sidebar on archives and search results pages?"
+#: inc/customizer.php:233
+msgid "Body font"
 msgstr ""
 
-#: inc/customizer.php:232
-msgid "Show post excerpts on the highlighted post?"
+#: inc/customizer.php:250
+msgid "Font sizes"
 msgstr ""
 
-#: inc/customizer.php:240
-msgid "Show post excerpts on regular posts?"
+#: inc/customizer.php:258
+msgid "Body text size on larger screens"
 msgstr ""
 
-#: inc/customizer.php:248
-msgid "Excerpt length"
+#: inc/customizer.php:259 inc/customizer.php:272
+msgid "Min 10px and max 32px."
 msgstr ""
 
-#: inc/customizer.php:261
-msgid "Custom read more text bellow the highlighted post"
+#: inc/customizer.php:271
+msgid "Body text size on smaller screens"
 msgstr ""
 
-#: inc/customizer.php:269
-msgid "Custom read more text bellow the regular post"
+#: inc/customizer.php:284
+msgid "Menu links on larger screens"
 msgstr ""
 
-#: inc/customizer.php:277 inc/customizer.php:316
-msgid "Hide post categories?"
+#: inc/customizer.php:285 inc/customizer.php:298 inc/customizer.php:311
+#: inc/customizer.php:324
+msgid "Min 10px and max 24px."
 msgstr ""
 
-#: inc/customizer.php:285 inc/customizer.php:324
-msgid "Hide post date and author?"
+#: inc/customizer.php:297
+msgid "Menu links on smaller screens"
 msgstr ""
 
-#: inc/customizer.php:293
-msgid "Single posts"
+#: inc/customizer.php:310
+msgid "Sub-menu links on larger screens"
 msgstr ""
 
-#: inc/customizer.php:300
-msgid "Show sidebar on single blog post?"
+#: inc/customizer.php:323
+msgid "Sub-menu links on smaller screens"
 msgstr ""
 
-#: inc/customizer.php:308
-msgid "Hide post thumbnail?"
-msgstr ""
-
-#: inc/customizer.php:332
-msgid "Blog post header layout?"
-msgstr ""
-
-#: inc/customizer.php:338 inc/customizer.php:515
-msgid "Featured image on top"
-msgstr ""
-
-#: inc/customizer.php:339 inc/customizer.php:514
-msgid "Title on top"
-msgstr ""
-
-#: inc/customizer.php:345
-msgid "Blog post title alignment?"
-msgstr ""
-
-#: inc/customizer.php:351 inc/customizer.php:527
-msgid "Align left"
-msgstr ""
-
-#: inc/customizer.php:352 inc/customizer.php:528
-msgid "Align center"
-msgstr ""
-
-#: inc/customizer.php:353 inc/customizer.php:529
-msgid "Align right"
-msgstr ""
-
-#: inc/customizer.php:359
-msgid "Post slider"
+#: inc/customizer.php:362
+msgid "Blog"
 msgstr ""
 
 #: inc/customizer.php:367
+msgid "Index/Archives"
+msgstr ""
+
+#: inc/customizer.php:374
+msgid "Show sidebar on blog index/home?"
+msgstr ""
+
+#: inc/customizer.php:382
+msgid "Show sidebar on archives and search results pages?"
+msgstr ""
+
+#: inc/customizer.php:390
+msgid "Show post excerpts on the highlighted post?"
+msgstr ""
+
+#: inc/customizer.php:398
+msgid "Show post excerpts on regular posts?"
+msgstr ""
+
+#: inc/customizer.php:406
+msgid "Excerpt length"
+msgstr ""
+
+#: inc/customizer.php:419
+msgid "Custom read more text bellow the highlighted post"
+msgstr ""
+
+#: inc/customizer.php:427
+msgid "Custom read more text bellow the regular post"
+msgstr ""
+
+#: inc/customizer.php:435 inc/customizer.php:474
+msgid "Hide post categories?"
+msgstr ""
+
+#: inc/customizer.php:443 inc/customizer.php:482
+msgid "Hide post date and author?"
+msgstr ""
+
+#: inc/customizer.php:451
+msgid "Single posts"
+msgstr ""
+
+#: inc/customizer.php:458
+msgid "Show sidebar on single blog post?"
+msgstr ""
+
+#: inc/customizer.php:466
+msgid "Hide post thumbnail?"
+msgstr ""
+
+#: inc/customizer.php:490
+msgid "Blog post header layout?"
+msgstr ""
+
+#: inc/customizer.php:496 inc/customizer.php:673
+msgid "Featured image on top"
+msgstr ""
+
+#: inc/customizer.php:497 inc/customizer.php:672
+msgid "Title on top"
+msgstr ""
+
+#: inc/customizer.php:503
+msgid "Blog post title alignment?"
+msgstr ""
+
+#: inc/customizer.php:509 inc/customizer.php:685
+msgid "Align left"
+msgstr ""
+
+#: inc/customizer.php:510 inc/customizer.php:686
+msgid "Align center"
+msgstr ""
+
+#: inc/customizer.php:511 inc/customizer.php:687
+msgid "Align right"
+msgstr ""
+
+#: inc/customizer.php:517
+msgid "Post slider"
+msgstr ""
+
+#: inc/customizer.php:525
 msgid "Select post slider category"
 msgstr ""
 
-#: inc/customizer.php:368
+#: inc/customizer.php:526
 msgid "Category with more than 4 posts recommended"
 msgstr ""
 
-#: inc/customizer.php:378
+#: inc/customizer.php:536
 msgid "Hide post slider category?"
 msgstr ""
 
-#: inc/customizer.php:387
+#: inc/customizer.php:545
 msgid "Cali: WooCommerce"
 msgstr ""
 
-#: inc/customizer.php:399
+#: inc/customizer.php:557
 msgid "Show Cart icon and dropdown in menu?"
 msgstr ""
 
-#: inc/customizer.php:407
+#: inc/customizer.php:565
 msgid "Hide breadcrumbs on shop, archive and single product pages?"
 msgstr ""
 
-#: inc/customizer.php:415
+#: inc/customizer.php:573
 msgid "Single products"
 msgstr ""
 
-#: inc/customizer.php:422
+#: inc/customizer.php:580
 msgid "Hide product star rating on single product?"
 msgstr ""
 
-#: inc/customizer.php:430
+#: inc/customizer.php:588
 msgid "Hide product SKU, Categories and Tags on single product?"
 msgstr ""
 
-#: inc/customizer.php:438
+#: inc/customizer.php:596
 msgid "Product archives"
 msgstr ""
 
-#: inc/customizer.php:445
+#: inc/customizer.php:603
 msgid "Hide sorting on shop and archive pages?"
 msgstr ""
 
-#: inc/customizer.php:453
+#: inc/customizer.php:611
 msgid "Hide number of results on shop and archive pages?"
 msgstr ""
 
-#: inc/customizer.php:461
+#: inc/customizer.php:619
 msgid "Hide product price on shop and archive pages?"
 msgstr ""
 
-#: inc/customizer.php:469
+#: inc/customizer.php:627
 msgid "Hide product ratings on shop and archive pages?"
 msgstr ""
 
-#: inc/customizer.php:477
+#: inc/customizer.php:635
 msgid "Hide \"add to cart\" button on shop and archive pages?"
 msgstr ""
 
-#: inc/customizer.php:485
+#: inc/customizer.php:643
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:492
+#: inc/customizer.php:650
 msgid "Hide page thumbnail?"
 msgstr ""
 
-#: inc/customizer.php:500
+#: inc/customizer.php:658
 msgid "Hide Yoast breadcrumbs on pages (except WooCommerce)?"
 msgstr ""
 
-#: inc/customizer.php:508
+#: inc/customizer.php:666
 msgid "Page header layout?"
 msgstr ""
 
-#: inc/customizer.php:521
+#: inc/customizer.php:679
 msgid "Page title alignment?"
 msgstr ""
 
@@ -790,11 +843,11 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: searchform.php:18
+#: searchform.php:13
 msgid "Search:"
 msgstr ""
 
-#: searchform.php:19
+#: searchform.php:14
 msgid "Search and hit enter..."
 msgstr ""
 

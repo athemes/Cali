@@ -39,7 +39,11 @@
 						<div class="col-xs-12 col-sm-8 mo-hide-on-desktop">
 							<div class="site-branding site-branding--mobile">
 								<?php the_custom_logo(); ?>
-								<h1 class="site-title--mobile"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+								<?php if ( is_front_page() && is_home() ) : ?>
+									<h1 class="site-title--mobile"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+								<?php else : ?>
+									<p class="site-title--mobile"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+								<?php endif; ?>
 							</div><!-- .site-branding--mobile -->
 						</div>
 						<div class="col-xs-3 col-sm-2 mo-hide-on-desktop pull-right secondary-navigation__wrap secondary-navigation__wrap--mobile-top">

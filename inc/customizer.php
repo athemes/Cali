@@ -172,7 +172,7 @@ Cali_Kirki::add_field( 'cali', array(
 	'transport'	  => 'auto',
     'output'      => array(
         array(
-            'element'  => '.main-navigation ul li a, .secondary-navigation .site-search_submit, .wc-header-cart__link, .header-top .social-navigation a',
+            'element'  => '.main-navigation ul li a, .secondary-navigation .site-search_submit, .wc-header-cart__wrap .wc-header-cart__link, .header-top .social-navigation a',
             'property' => 'color',
         ),
     ),	
@@ -197,6 +197,164 @@ Cali_Kirki::add_field( 'cali', array(
         ),
     ),	
 ) );
+
+/* Typography */
+Cali_Kirki::add_panel( 'cali_typography', array(
+    'priority'    => 21,
+    'title'       => esc_attr__( 'Typography', 'cali' ),
+) );
+Cali_Kirki::add_section( 'cali_font_families', array(
+    'title'          => esc_attr__( 'Font families', 'cali' ),
+    'priority'       => 31,
+    'panel'			 => 'cali_typography'
+) );
+
+if ( class_exists( 'Kirki_Fonts' ) ) {
+	Cali_Kirki::add_field( 'cali', array(
+		'type'        => 'select',
+		'settings'    => 'cali_headings_font',
+		'label'       => __( 'Headings font', 'cali' ),
+		'section'     => 'cali_font_families',
+		'default'     => 'Playfair Display',
+		'priority'    => 10,
+		'multiple'    => 1,
+		'choices'     => Kirki_Fonts::get_font_choices(),
+		'transport'	  => 'refresh',
+	    'output'      => array(
+	        array(
+	            'element'  => '.font-family--1,h1,h2,h3,h4,h5,h6,blockquote,cite,.more-link,.entry-meta .author,.byline .author,.byline em,.entry-meta .author a.url,.dropcap::first-letter,.site-title,.site-title--footer,.site-title--mobile.site-search__wrap .site-search_input,.widget_search .site-search .site-search_input,.author_name,.comment-author,.page-author_name,.slide-overlay_author',
+	            'property' => 'font-family',
+	        ),
+	    ),	
+	) );
+	Cali_Kirki::add_field( 'cali', array(
+		'type'        => 'select',
+		'settings'    => 'cali_body_font',
+		'label'       => __( 'Body font', 'cali' ),
+		'section'     => 'cali_font_families',
+		'default'     => 'Work Sans',
+		'priority'    => 11,
+		'multiple'    => 1,
+		'choices'     => Kirki_Fonts::get_font_choices(),
+		'transport'	  => 'refresh',
+	    'output'      => array(
+	        array(
+	            'element'  => '.font-family--2,body,button,input,select,optgroup,textarea,.mo-category,.page-header_subtitle,.shop-overlay_subtitle',
+	            'property' => 'font-family',
+	        ),
+	    ),	
+	) );
+}
+
+Cali_Kirki::add_section( 'cali_font_sizes', array(
+    'title'          => esc_attr__( 'Font sizes', 'cali' ),
+    'priority'       => 31,
+    'panel'			 => 'cali_typography'    
+) );
+
+$font_sizes = array(
+	'body_text_desktop' => array(
+		'settings'  	=> 'cali_body_text_desktop_size',
+		'label' 		=> __( 'Body text size on larger screens', 'cali' ),
+		'description' 	=> __( 'Min 10px and max 32px.', 'cali' ),
+		'default' 		=> 16,
+		'choices'   	=> array(
+			'min'  => 10,
+			'max'  => 32,
+			'step' => 1,
+		),
+		'element'  => 'html',
+		'media_query' => '@media (min-width: 768px)'
+	),
+	'body_text_mobile' => array(
+		'settings'  	=> 'cali_body_text_mobile_size',
+		'label' 		=> __( 'Body text size on smaller screens', 'cali' ),
+		'description' 	=> __( 'Min 10px and max 32px.', 'cali' ),
+		'default' 		=> 14,
+		'choices'   	=> array(
+			'min'  => 10,
+			'max'  => 32,
+			'step' => 1,
+		),
+		'element'  => 'html',
+		'media_query' => '@media (max-width: 767px)'
+	),
+	'menu_links' => array(
+		'settings'  	=> 'cali_menu_links_size',
+		'label' 		=> __( 'Menu links on larger screens', 'cali' ),
+		'description' 	=> __( 'Min 10px and max 24px.', 'cali' ),
+		'default' 		=> 13,
+		'choices'   	=> array(
+			'min'  => 10,
+			'max'  => 24,
+			'step' => 1,
+		),
+		'element'  => '.main-navigation a, .footer-navigation a',
+		'media_query' => '@media (min-width: 1200px)'
+	),
+	'mobile_menu_links' => array(
+		'settings'  	=> 'cali_mobile_menu_links_size',
+		'label' 		=> __( 'Menu links on smaller screens', 'cali' ),
+		'description' 	=> __( 'Min 10px and max 24px.', 'cali' ),
+		'default' 		=> 15,
+		'choices'   	=> array(
+			'min'  => 10,
+			'max'  => 24,
+			'step' => 1,
+		),
+		'element'  => '.main-navigation a, .footer-navigation a',
+		'media_query' => '@media (max-width: 1199px)'
+	),
+	'submenu_links' 	=> array(
+		'settings'  	=> 'cali_submenu_links_size',
+		'label' 		=> __( 'Sub-menu links on larger screens', 'cali' ),
+		'description' 	=> __( 'Min 10px and max 24px.', 'cali' ),
+		'default' 		=> 15,
+		'choices'   	=> array(
+			'min'  => 10,
+			'max'  => 24,
+			'step' => 1,
+		),
+		'element'  => '.main-navigation ul .sub-menu li a, .main-navigation ul .children li a',
+		'media_query' => '@media (min-width: 1200px)'
+	),
+	'mobile_submenu_links' => array(
+		'settings'  	=> 'cali_mobile_submenu_links_size',
+		'label' 		=> __( 'Sub-menu links on smaller screens', 'cali' ),
+		'description' 	=> __( 'Min 10px and max 24px.', 'cali' ),
+		'default' 		=> 13,
+		'choices'   	=> array(
+			'min'  => 10,
+			'max'  => 24,
+			'step' => 1,
+		),
+		'element'  => '.main-navigation ul .sub-menu li a, .main-navigation ul .children li a',
+		'media_query' => '@media (max-width: 1199px)'
+	),
+);
+
+foreach ( $font_sizes as $font_size_option ) {
+	Cali_Kirki::add_field( 'cali', array(
+		'type'     	  => 'slider',
+		'settings'    => $font_size_option['settings'],
+		'label'       => $font_size_option['label'],
+		'description' => $font_size_option['description'],
+		'section'     => 'cali_font_sizes',
+		'default'     => $font_size_option['default'],
+		'priority'    => 10,
+		'multiple'    => 1,
+		'choices'  => $font_size_option['choices'],
+		'transport'	  => 'auto',
+	    'output'      => array(
+			array(
+				'element'  		=> $font_size_option['element'],
+				'property' 		=> 'font-size',
+				'units'			=> 'px',
+				'media_query'	=> $font_size_option['media_query'],
+			),
+	    ),	
+	) );
+}
 
 /* Blog options */
 Cali_Kirki::add_panel( 'cali_blog_panel', array(

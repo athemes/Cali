@@ -42,7 +42,7 @@ $hide_post_slider_cat	= get_theme_mod( 'cali_post_slider_hide_cat', 0 );
 					<?php the_post_thumbnail(); ?>
 					<?php else : ?>
 					<div class="mo-slider_slide-placeholder">
-						<i class="mo mo-picture" aria-hidden="true"></i>
+						<i class="far fa-image" aria-hidden="true"></i>
 					</div>
 					<?php endif; ?>
 					<div class="slide-overlay">

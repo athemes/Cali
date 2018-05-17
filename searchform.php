@@ -8,12 +8,12 @@
  */
 ?>
 
-<form class="site-search" action="/" role="search" method="get" id="searchform">
+<form class="site-search" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" method="get" id="searchform">
     <label>
         <span class="screen-reader-text"><?php esc_attr_e( 'Search:', 'cali' ); ?></span>
         <input type="text" name="s" id="search" class="site-search_input" value="<?php the_search_query(); ?>" placeholder="<?php esc_attr_e( 'Search and hit enter...', 'cali' ); ?>">
     </label>
     <button type="submit" id="searchsubmit" class="site-search_submit">
-        <i class="fa fa-search" aria-hidden="true"></i>
+        <i class="fas fa-search" aria-hidden="true"></i>
     </button>
 </form>

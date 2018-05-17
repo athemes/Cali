@@ -49,7 +49,7 @@ $postClasses = array(
             </div>
             <?php endif; ?>
 
-        </header>
+        </header><!-- .entry-header -->
 
         <?php
         if ( ($headerLayout == 'post-title--top') && !$hide_thumb ) :
@@ -79,6 +79,15 @@ $postClasses = array(
             ?>
         </div><!-- .entry-content -->
         
-        <?php get_template_part( 'template-parts/content', 'blog_footer' ); ?>
+        <footer class="entry-footer clearfix">
+            <?php
+            if (has_tag()) : ?>
+                <ul class="single-post_tags">
+                    <?php the_tags( '<li>', '</li><li>', '</li>' ); ?>
+                </ul>
+            <?php
+            endif;
+            ?>
+        </footer><!-- .entry-footer -->
     </article>
 </div>

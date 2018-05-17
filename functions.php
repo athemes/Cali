@@ -141,9 +141,7 @@ function cali_scripts() {
 
 	wp_enqueue_style( 'cali-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'cali-icons', get_template_directory_uri() . '/fonts/fontawesome.min.css' );
-	
-	wp_enqueue_script( 'cali-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_style( 'cali-icons', get_template_directory_uri() . '/fonts/fontawesome/fontawesome-all.min.css' );
 
 	wp_enqueue_script( 'cali-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'),'2.3.2', true );
 
@@ -166,11 +164,6 @@ function cali_enqueue_bootstrap() {
 	wp_enqueue_style( 'cali-bootstrap', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), true );
 }
 add_action( 'wp_enqueue_scripts', 'cali_enqueue_bootstrap', 9 );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
