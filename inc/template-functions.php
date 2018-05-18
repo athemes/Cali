@@ -51,19 +51,19 @@ function cali_comment_template($comment, $args, $depth) {
 						<time datetime="<?php comment_time( 'c' ); ?>">
 							<?php
 								/* translators: 1: comment date, 2: comment time */
-								printf( __( '%1$s at %2$s', 'cali' ), get_comment_date( '', $comment ), get_comment_time() );
+								printf( esc_html__( '%1$s at %2$s', 'cali' ), get_comment_date( '', $comment ), get_comment_time() );
 							?>
 						</time>
 					</span><!-- .comment-metadata -->
 					<a class="comment-href" href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
-						<span class="sr-only"><?php _e( 'Direct link to comment', 'cali' ); ?></span>
+						<span class="sr-only"><?php esc_html_e( 'Direct link to comment', 'cali' ); ?></span>
 						<i class="fas fa-link" aria-hidden="true"></i>
 					</a>
 				</header><!-- .comment-meta -->
 
 				<div class="comment-content">
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-					<p class="comment-awaiting-caliration"><?php _e( 'Your comment is awaiting caliration.', 'cali' ); ?></p>
+					<p class="comment-awaiting-caliration"><?php esc_html_e( 'Your comment is awaiting caliration.', 'cali' ); ?></p>
 					<?php endif; ?>
 
 					<?php comment_text(); ?>

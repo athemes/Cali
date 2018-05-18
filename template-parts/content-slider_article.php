@@ -18,7 +18,6 @@ $moSliderCategory		= get_theme_mod( 'cali_post_slider_category' );
 $hide_post_slider_cat	= get_theme_mod( 'cali_post_slider_hide_cat', 0 );
 
 ?>
-<h1><?php //echo $moSliderCategoryTest; ?></h1>
 <div class="mo-slider js-mo-article-slider owl-carousel owl-theme <?php echo $moSliderClasses; ?>">
 	<?php
 
@@ -60,7 +59,7 @@ $hide_post_slider_cat	= get_theme_mod( 'cali_post_slider_hide_cat', 0 );
 			
 		}
 	} else { ?>
-		<h3><?php _e('Please add posts to the selected slider category in Customizer to populate the Post slider', 'cali'); ?></h3>
+		<h3><?php esc_html_e('Please add posts to the selected slider category in Customizer to populate the Post slider', 'cali'); ?></h3>
 	<?php
 	}
 	/* Restore original Post Data */

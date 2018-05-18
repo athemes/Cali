@@ -218,7 +218,8 @@ figcaption {
 	font-weight: bold;
 }
 
-.more-link {
+.more-link,
+.more-link:visited {
 	font-size: 14px;
 	font-style: italic;
 	font-family: 'Playfair Display', serif;
@@ -240,6 +241,15 @@ figcaption {
 	font-style: italic;
 	font-family: 'Playfair Display', serif;
 	color: #404040;
+}
+
+.entry-meta .author:hover,
+.entry-meta .author:focus,
+.byline .author:hover,
+.byline .author:focus,
+.entry-meta .author a.url:hover,
+.entry-meta .author a.url:focus {
+	color: #fb397d;
 }
 
 .section-title {
@@ -2539,6 +2549,11 @@ a:hover, a:active {
 
 .entry-meta .posted-on a {
 	color: inherit;
+}
+
+.entry-meta .posted-on a:hover,
+.entry-meta .posted-on a:focus {
+	color: #fb397d;
 }
 
 .entry-content p {
