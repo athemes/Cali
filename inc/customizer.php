@@ -213,7 +213,7 @@ if ( class_exists( 'Kirki_Fonts' ) ) {
 	Cali_Kirki::add_field( 'cali', array(
 		'type'        => 'select',
 		'settings'    => 'cali_headings_font',
-		'label'       => __( 'Headings font', 'cali' ),
+		'label'       => esc_attr__( 'Headings font', 'cali' ),
 		'section'     => 'cali_font_families',
 		'default'     => 'Playfair Display',
 		'priority'    => 10,
@@ -230,7 +230,7 @@ if ( class_exists( 'Kirki_Fonts' ) ) {
 	Cali_Kirki::add_field( 'cali', array(
 		'type'        => 'select',
 		'settings'    => 'cali_body_font',
-		'label'       => __( 'Body font', 'cali' ),
+		'label'       => esc_attr__( 'Body font', 'cali' ),
 		'section'     => 'cali_font_families',
 		'default'     => 'Work Sans',
 		'priority'    => 11,
@@ -255,8 +255,8 @@ Cali_Kirki::add_section( 'cali_font_sizes', array(
 $font_sizes = array(
 	'body_text_desktop' => array(
 		'settings'  	=> 'cali_body_text_desktop_size',
-		'label' 		=> __( 'Body text size on larger screens', 'cali' ),
-		'description' 	=> __( 'Min 10px and max 32px.', 'cali' ),
+		'label' 		=> esc_attr__( 'Body text size on larger screens', 'cali' ),
+		'description' 	=> esc_attr__( 'Min 10px and max 32px.', 'cali' ),
 		'default' 		=> 16,
 		'choices'   	=> array(
 			'min'  => 10,
@@ -268,8 +268,8 @@ $font_sizes = array(
 	),
 	'body_text_mobile' => array(
 		'settings'  	=> 'cali_body_text_mobile_size',
-		'label' 		=> __( 'Body text size on smaller screens', 'cali' ),
-		'description' 	=> __( 'Min 10px and max 32px.', 'cali' ),
+		'label' 		=> esc_attr__( 'Body text size on smaller screens', 'cali' ),
+		'description' 	=> esc_attr__( 'Min 10px and max 32px.', 'cali' ),
 		'default' 		=> 14,
 		'choices'   	=> array(
 			'min'  => 10,
@@ -281,8 +281,8 @@ $font_sizes = array(
 	),
 	'menu_links' => array(
 		'settings'  	=> 'cali_menu_links_size',
-		'label' 		=> __( 'Menu links on larger screens', 'cali' ),
-		'description' 	=> __( 'Min 10px and max 24px.', 'cali' ),
+		'label' 		=> esc_attr__( 'Menu links on larger screens', 'cali' ),
+		'description' 	=> esc_attr__( 'Min 10px and max 24px.', 'cali' ),
 		'default' 		=> 13,
 		'choices'   	=> array(
 			'min'  => 10,
@@ -294,8 +294,8 @@ $font_sizes = array(
 	),
 	'mobile_menu_links' => array(
 		'settings'  	=> 'cali_mobile_menu_links_size',
-		'label' 		=> __( 'Menu links on smaller screens', 'cali' ),
-		'description' 	=> __( 'Min 10px and max 24px.', 'cali' ),
+		'label' 		=> esc_attr__( 'Menu links on smaller screens', 'cali' ),
+		'description' 	=> esc_attr__( 'Min 10px and max 24px.', 'cali' ),
 		'default' 		=> 15,
 		'choices'   	=> array(
 			'min'  => 10,
@@ -307,8 +307,8 @@ $font_sizes = array(
 	),
 	'submenu_links' 	=> array(
 		'settings'  	=> 'cali_submenu_links_size',
-		'label' 		=> __( 'Sub-menu links on larger screens', 'cali' ),
-		'description' 	=> __( 'Min 10px and max 24px.', 'cali' ),
+		'label' 		=> esc_attr__( 'Sub-menu links on larger screens', 'cali' ),
+		'description' 	=> esc_attr__( 'Min 10px and max 24px.', 'cali' ),
 		'default' 		=> 15,
 		'choices'   	=> array(
 			'min'  => 10,
@@ -320,8 +320,8 @@ $font_sizes = array(
 	),
 	'mobile_submenu_links' => array(
 		'settings'  	=> 'cali_mobile_submenu_links_size',
-		'label' 		=> __( 'Sub-menu links on smaller screens', 'cali' ),
-		'description' 	=> __( 'Min 10px and max 24px.', 'cali' ),
+		'label' 		=> esc_attr__( 'Sub-menu links on smaller screens', 'cali' ),
+		'description' 	=> esc_attr__( 'Min 10px and max 24px.', 'cali' ),
 		'default' 		=> 13,
 		'choices'   	=> array(
 			'min'  => 10,
