@@ -25,9 +25,9 @@ if ( ! function_exists( 'cali_posted_on' ) ) :
 		);
 
 		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'cali' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			'<a href="%1$s" rel="bookmark">%2$s</a>',
+			esc_url( get_permalink() ),
+			$time_string
 		);
 
 		$byline = sprintf(
@@ -51,17 +51,11 @@ if ( ! function_exists( 'cali_posted_on_static' ) ) :
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
-		$time_string = sprintf( $time_string,
+		$posted_on = sprintf( $time_string,
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),
 			esc_attr( get_the_modified_date( 'c' ) ),
 			esc_html( get_the_modified_date() )
-		);
-
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'cali' ),
-			$time_string
 		);
 
 		$byline = sprintf(
@@ -230,10 +224,8 @@ function cali_read_more_link() {
   	if ( $more == '' ) {
     	echo '<a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue Reading', 'cali' ) . '</a>';
 	} else {
-		echo '<a class="more-link" href="' . get_permalink( get_the_ID() ) . '">' . esc_html( $more ) . '</a>';
+		echo '<a class="more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . esc_html( $more ) . '</a>';
 	}
-
-	//echo '<a class="more-link" href="' . esc_url( get_permalink() ) . '">' . esc_html__( 'Continue Reading', 'cali' ) . '</a>';
 }
 
 /**

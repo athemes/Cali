@@ -46,14 +46,14 @@
 	}
 
 	function form( $instance ) {
-		$title 		= isset( $instance['title'] ) ? $instance['title'] : '';
+		$title 		= isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'cali') ?></label>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e('Title:', 'cali') ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />
 		</p>
-		<p><em><?php _e('This widget will show the page/post author image, name and bio.', 'cali'); ?></em></p>
+		<p><em><?php esc_html_e('This widget will show the page/post author image, name and bio.', 'cali'); ?></em></p>
 		<?php
 	}
 }

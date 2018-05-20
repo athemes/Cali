@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cali\n"
-"POT-Creation-Date: 2018-05-15 21:45+0200\n"
+"POT-Creation-Date: 2018-05-19 18:43+0200\n"
 "PO-Revision-Date: 2018-05-02 22:44+0200\n"
 "Last-Translator: \n"
 "Language-Team: aThemes athemes.com\n"
@@ -752,7 +752,7 @@ msgstr ""
 
 #: inc/footer-functions.php:23
 #, php-format
-msgid "Theme: %2$s by %1$s."
+msgid "Theme: %1$s by %2$s."
 msgstr ""
 
 #: inc/kirki/include-kirki.php:54
@@ -800,41 +800,36 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: inc/template-tags.php:29 inc/template-tags.php:63
-#, php-format
-msgid "%s"
-msgstr ""
-
-#: inc/template-tags.php:35 inc/template-tags.php:69 inc/template-tags.php:85
+#: inc/template-tags.php:35 inc/template-tags.php:63 inc/template-tags.php:79
 #, php-format
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:102 inc/template-tags.php:109
+#: inc/template-tags.php:96 inc/template-tags.php:103
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:105
+#: inc/template-tags.php:99
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
-#: inc/template-tags.php:112
+#: inc/template-tags.php:106
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:122
+#: inc/template-tags.php:116
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:139 template-parts/content-page.php:60
+#: inc/template-tags.php:133 template-parts/content-page.php:60
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: inc/template-tags.php:231
+#: inc/template-tags.php:225
 msgid "Continue Reading"
 msgstr ""
 
@@ -843,12 +838,12 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: searchform.php:13
-msgid "Search:"
+#: searchform.php:15
+msgid "Search for:"
 msgstr ""
 
-#: searchform.php:14
-msgid "Search and hit enter..."
+#: searchform.php:17
+msgid "Search &hellip;"
 msgstr ""
 
 #: template-parts/content-next_prev_posts.php:13
@@ -890,7 +885,7 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content-slider_article.php:63
+#: template-parts/content-slider_article.php:62
 msgid ""
 "Please add posts to the selected slider category in Customizer to populate "
 "the Post slider"

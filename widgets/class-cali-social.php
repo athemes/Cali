@@ -47,25 +47,25 @@
 	}
 
 	function form( $instance ) {
-		$title 		= isset( $instance['title'] ) ? $instance['title'] : '';
+		$title 		= isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 		$nav_menu 	= isset( $instance['nav_menu'] ) ? $instance['nav_menu'] : '';
 
 		$menus = wp_get_nav_menus( array( 'orderby' => 'name' ) );
 
 		if ( !$menus ) {
-			echo '<p>'. sprintf( __('No menus have been created yet. <a href="%s">Create some</a>.', 'cali'), admin_url('nav-menus.php') ) .'</p>';
+			echo '<p>'. sprintf( esc_html__('No menus have been created yet. <a href="%s">Create some</a>.', 'cali'), esc_url( admin_url('nav-menus.php') ) ) .'</p>';
 			return;
 		}
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'cali') ?></label>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e('Title:', 'cali') ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />
 		</p>
-		<p><em><?php _e('In order to display your social icons in a widget, all you need to do is go to <strong>Appearance > Menus</strong> and create a menu containing links to your social profiles, then assign that menu here. Supported networks: Facebook, Twitter, Google Plus, Instagram, Dribble, Vimeo, Linkedin, Youtube, Flickr, Pinterest, Tumblr, Foursquare, Behance.', 'cali'); ?></em></p>
+		<p><em><?php esc_html_e('In order to display your social icons in a widget, all you need to do is go to <strong>Appearance > Menus</strong> and create a menu containing links to your social profiles, then assign that menu here. Supported networks: Facebook, Twitter, Google Plus, Instagram, Dribble, Vimeo, Linkedin, Youtube, Flickr, Pinterest, Tumblr, Foursquare, Behance.', 'cali'); ?></em></p>
 		<p>
-			<label for="<?php echo $this->get_field_id('nav_menu'); ?>"><?php _e('Select your social menu:', 'cali'); ?></label>
+			<label for="<?php echo $this->get_field_id('nav_menu'); ?>"><?php esc_html_e('Select your social menu:', 'cali'); ?></label>
 			<select id="<?php echo $this->get_field_id('nav_menu'); ?>" name="<?php echo $this->get_field_name('nav_menu'); ?>">
-				<option value="0"><?php _e( '&mdash; Select &mdash;', 'cali' ) ?></option>
+				<option value="0"><?php esc_html_e( '&mdash; Select &mdash;', 'cali' ) ?></option>
 		<?php
 			foreach ( $menus as $menu ) {
 				echo '<option value="' . $menu->term_id . '"'

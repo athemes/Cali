@@ -53,7 +53,7 @@ class Cali_Sidebar_Posts extends WP_Widget {
 						<?php the_post_thumbnail('thumbnail'); ?>
 						<?php the_title( '<h3 class="post-title">','</h3>' ); ?>
 						<?php if ( $show_author ) : ?>
-							<span class="byline"><?php _e('by', 'cali'); ?> <em><?php echo get_the_author(); ?></em></span>
+							<span class="byline"><?php esc_html_e('by', 'cali'); ?> <em><?php echo get_the_author(); ?></em></span>
 						<?php endif; ?>
 					</a>
 				</li>
@@ -81,14 +81,14 @@ class Cali_Sidebar_Posts extends WP_Widget {
 		$number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
 		$show_author = isset( $instance['show_author'] ) ? (bool) $instance['show_author'] : false;
 ?>
-		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'cali' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'cali' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'cali' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:', 'cali' ); ?></label>
 		<input class="tiny-text" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" /></p>
 
 		<p><input class="checkbox" type="checkbox"<?php checked( $show_author ); ?> id="<?php echo $this->get_field_id( 'show_author' ); ?>" name="<?php echo $this->get_field_name( 'show_author' ); ?>" />
-		<label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Display post author?', 'cali' ); ?></label></p>
+		<label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php esc_html_e( 'Display post author?', 'cali' ); ?></label></p>
 <?php
 	}
 }

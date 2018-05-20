@@ -86,15 +86,15 @@ if ( post_password_required() ) {
 		'title_reply'			=> 'Leave a comment',
 		'fields' 				=> apply_filters( 'comment_form_default_fields', array(
 		'author' 				=> '<p class="comment-form-author">' .
-									'<input id="author" name="author" type="text" placeholder="' . __( 'Name', 'cali' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
+									'<input id="author" name="author" type="text" placeholder="' . esc_attr__( 'Name', 'cali' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $aria_req . $html_req . ' /></p>',
 		'email'  				=> '<p class="comment-form-email">' .
-		            				'<input id="email" name="email" type="email" placeholder="' . __( 'Email', 'cali' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
+		            				'<input id="email" name="email" type="email" placeholder="' . esc_attr__( 'Email', 'cali' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>',
 		'url'    				=> '<p class="comment-form-url">' .
-									'<input id="url" name="url" type="url" placeholder="' . __( 'Website', 'cali' ) .'" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>'
+									'<input id="url" name="url" type="url" placeholder="' . esc_attr__( 'Website', 'cali' ) .'" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200" /></p>'
 		)),
 		'comment_field' 		=> '<p class="comment-form-comment"><textarea id="comment" name="comment" placeholder="' . _x( 'Message', 'noun', 'cali' ) . ' *' . '" cols="45" rows="3" maxlength="65525" aria-required="true" required="required"></textarea></p>',
 		'comment_notes_after' 	=> '',
-		'label_submit'         	=> __( 'Send Message', 'cali' ),
+		'label_submit'         	=> esc_attr__( 'Send Message', 'cali' ),
 	);
 
 	comment_form($comment_args);
