@@ -9,74 +9,51 @@
 
 ?>
 
-<div class="related-posts">
-    <h3 class="section-title"><?php esc_html_e( 'Related Posts', 'cali' ); ?></h3>
+<div class="mo-related-posts">
     <div class="row">
     <?php
-        $prevPost = get_previous_post(true);
-        $nextPost = get_next_post(true);
+        $prev_post              = get_previous_post();
+        $next_post              = get_next_post();
+        
+        // prev/next post thumb size
+        $pn_post_thumb_size     = 'thumbnail';
+        // prev/next post thumb class
+        $pn_post_thumb_class    = 'mo-related-post_thumb';
     ?>
     
-        <?php $prevPost = get_previous_post(true);
-            if($prevPost) {
-                $args = array(
-                    'posts_per_page' => 1,
-                    'include' => $prevPost->ID
-                );
-                $prevPost = get_posts($args);
-                foreach ($prevPost as $post) {
-                    setup_postdata($post);
+        <?php
+            if($prev_post) {
+                $prev_post_id = $prev_post->ID;
+                $prev_thumb = get_the_post_thumbnail($prev_post_id, $pn_post_thumb_size, array( 'class' => $pn_post_thumb_class ));
         ?>
                 <div class="col-sm-6">
-                    <article class="regular-post post">
-                        <div class="entry-thumb">
-                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium_large'); ?></a>
-                        </div>
-                        <header class="entry-header">
-                            <div class="cat-links mo-category">
-                                <?php cali_get_first_cat(); ?>
-                            </div>
-                            <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                            <div class="entry-meta">
-                                <?php cali_posted_on(); ?>
-                            </div>
-                        </header>
-                    </article>
+                    <div class="mo-related-post mo-related-post--prev">
+                        <a title="<?php echo apply_filters( 'the_title_attribute', $prev_post->post_title ); ?>" href="<?php the_permalink($prev_post_id); ?>">
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                            <p class="mo-related-post_title"><?php echo apply_filters( 'the_title', $prev_post->post_title ); ?></p>
+                            <?php echo $prev_thumb; ?>
+                        </a>
+                    </div>
                 </div>
         <?php
-                    wp_reset_postdata();
-                } //end foreach
             } // end if
             
-            $nextPost = get_next_post(true);
-            if($nextPost) {
-                $args = array(
-                    'posts_per_page' => 1,
-                    'include' => $nextPost->ID
-                );
-                $nextPost = get_posts($args);
-                foreach ($nextPost as $post) {
-                    setup_postdata($post);
+            
+            if($next_post) {
+                $next_post_id = $next_post->ID;
+                $next_thumb = get_the_post_thumbnail($next_post_id, $pn_post_thumb_size, array( 'class' => $pn_post_thumb_class ));
         ?>
                 <div class="col-sm-6">
-                    <article class="regular-post post">
-                        <div class="entry-thumb">
-                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-                        </div>
-                        <header class="entry-header">
-                            <div class="cat-links mo-category">
-                                <?php cali_get_first_cat(); ?>
-                            </div>
-                            <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                            <div class="entry-meta">
-                                <?php cali_posted_on(); ?>
-                            </div>
-                        </header>
-                    </article>
+                    <div class="mo-related-post mo-related-post--next">
+                        <a href="<?php the_permalink($next_post_id); ?>">
+                            <?php echo $next_thumb; ?>
+                            <p class="mo-related-post_title"><?php echo apply_filters( 'the_title', $next_post->post_title ); ?></p>
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </a>
+                    </div>
                 </div>
         <?php
-                    wp_reset_postdata();
-                } //end foreach
+                
             } // end if
         ?>
     </div>
