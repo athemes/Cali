@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cali\n"
-"POT-Creation-Date: 2018-05-19 18:43+0200\n"
+"POT-Creation-Date: 2018-05-21 19:27+0200\n"
 "PO-Revision-Date: 2018-05-02 22:44+0200\n"
 "Last-Translator: \n"
 "Language-Team: aThemes athemes.com\n"
@@ -844,10 +844,6 @@ msgstr ""
 
 #: searchform.php:17
 msgid "Search &hellip;"
-msgstr ""
-
-#: template-parts/content-next_prev_posts.php:13
-msgid "Related Posts"
 msgstr ""
 
 #: template-parts/content-none.php:19

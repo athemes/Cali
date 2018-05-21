@@ -15,9 +15,8 @@
         $prev_post              = get_previous_post();
         $next_post              = get_next_post();
         
-        // prev/next post thumb size
+        // prev/next post thumb size and class
         $pn_post_thumb_size     = 'thumbnail';
-        // prev/next post thumb class
         $pn_post_thumb_class    = 'mo-related-post_thumb';
     ?>
     
