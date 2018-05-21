@@ -239,7 +239,7 @@ if ( class_exists( 'Kirki_Fonts' ) ) {
 		'transport'	  => 'refresh',
 	    'output'      => array(
 	        array(
-	            'element'  => '.font-family--2,body,button,input,select,optgroup,textarea,.mo-category,.page-header_subtitle,.shop-overlay_subtitle',
+	            'element'  => '.font-family--2,body,button,input,select,optgroup,textarea,.ca-category,.page-header_subtitle,.shop-overlay_subtitle',
 	            'property' => 'font-family',
 	        ),
 	    ),	

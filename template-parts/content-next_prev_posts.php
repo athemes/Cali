@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="mo-related-posts">
+<div class="ca-related-posts">
     <div class="row">
     <?php
         $prev_post              = get_previous_post();
@@ -17,7 +17,7 @@
         
         // prev/next post thumb size and class
         $pn_post_thumb_size     = 'thumbnail';
-        $pn_post_thumb_class    = 'mo-related-post_thumb';
+        $pn_post_thumb_class    = 'ca-related-post_thumb';
     ?>
     
         <?php
@@ -26,10 +26,10 @@
                 $prev_thumb = get_the_post_thumbnail($prev_post_id, $pn_post_thumb_size, array( 'class' => $pn_post_thumb_class ));
         ?>
                 <div class="col-sm-6">
-                    <div class="mo-related-post mo-related-post--prev">
+                    <div class="ca-related-post ca-related-post--prev">
                         <a title="<?php echo apply_filters( 'the_title_attribute', $prev_post->post_title ); ?>" href="<?php the_permalink($prev_post_id); ?>">
                             <i class="fas fa-long-arrow-alt-left"></i>
-                            <p class="mo-related-post_title"><?php echo apply_filters( 'the_title', $prev_post->post_title ); ?></p>
+                            <p class="ca-related-post_title"><?php echo apply_filters( 'the_title', $prev_post->post_title ); ?></p>
                             <?php echo $prev_thumb; ?>
                         </a>
                     </div>
@@ -43,10 +43,10 @@
                 $next_thumb = get_the_post_thumbnail($next_post_id, $pn_post_thumb_size, array( 'class' => $pn_post_thumb_class ));
         ?>
                 <div class="col-sm-6">
-                    <div class="mo-related-post mo-related-post--next">
+                    <div class="ca-related-post ca-related-post--next">
                         <a href="<?php the_permalink($next_post_id); ?>">
                             <?php echo $next_thumb; ?>
-                            <p class="mo-related-post_title"><?php echo apply_filters( 'the_title', $next_post->post_title ); ?></p>
+                            <p class="ca-related-post_title"><?php echo apply_filters( 'the_title', $next_post->post_title ); ?></p>
                             <i class="fas fa-long-arrow-alt-right"></i>
                         </a>
                     </div>

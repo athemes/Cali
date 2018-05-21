@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('regular-post'); ?>>
 	<?php cali_post_thumbnail(); ?>
 	<header class="entry-header">
-		<div class="cat-links mo-category">
+		<div class="cat-links ca-category">
 			<?php cali_get_first_cat(); ?>
 		</div>
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>

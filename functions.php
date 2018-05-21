@@ -120,7 +120,7 @@ function cali_widgets_init() {
 		'name'          => esc_html__( 'Footer Instagram', 'cali' ),
 		'id'            => 'footer-instagram',
 		'description'   => '',
-		'before_widget' => '<div id="mo-footer-instagram" class="mo-instagram-feed mo-instagram-feed--widget js-mo-widget-instagram-feed owl-carousel owl-theme">',
+		'before_widget' => '<div id="ca-footer-instagram" class="ca-instagram-feed ca-instagram-feed--widget js-ca-widget-instagram-feed owl-carousel owl-theme">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',

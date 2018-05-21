@@ -24,7 +24,7 @@
 		
 	<footer id="colophon" class="site-footer">
 		<div class="container">
-			<nav class="social-navigation--footer social-links clearfix mo-social-buttons">
+			<nav class="social-navigation--footer social-links clearfix ca-social-buttons">
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-social-footer',

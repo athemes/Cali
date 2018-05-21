@@ -8,23 +8,23 @@
  */
 
 
-$moSliderMobile 		= 2;
-$moSliderTablet 		= 3;
-$moSliderDesktop 		= 4;
+$caSliderMobile 		= 2;
+$caSliderTablet 		= 3;
+$caSliderDesktop 		= 4;
 
-$moSliderClasses 		= ' mo-slider-mobile-' . $moSliderMobile . ' mo-slider-tablet-' . $moSliderTablet . ' mo-slider-desktop-' . $moSliderDesktop;
+$caSliderClasses 		= ' ca-slider-mobile-' . $caSliderMobile . ' ca-slider-tablet-' . $caSliderTablet . ' ca-slider-desktop-' . $caSliderDesktop;
 
-$moSliderCategory		= get_theme_mod( 'cali_post_slider_category' );
+$caSliderCategory		= get_theme_mod( 'cali_post_slider_category' );
 $hide_post_slider_cat	= get_theme_mod( 'cali_post_slider_hide_cat', 0 );
 
 ?>
-<div class="mo-slider js-mo-article-slider owl-carousel owl-theme <?php echo $moSliderClasses; ?>">
+<div class="ca-slider js-ca-article-slider owl-carousel owl-theme <?php echo $caSliderClasses; ?>">
 	<?php
 
 	// Arguments
 	$args = array(
 		'post_type' 			=> 'post',
-		'cat' 					=> $moSliderCategory,
+		'cat' 					=> $caSliderCategory,
 		'ignore_sticky_posts' 	=> true
 	);
 
@@ -36,17 +36,17 @@ $hide_post_slider_cat	= get_theme_mod( 'cali_post_slider_hide_cat', 0 );
 		while ( $the_query->have_posts() ) {
 			$the_query->the_post(); ?>
 
-				<a href="<?php the_permalink(); ?>" class="mo-slider_slide">
+				<a href="<?php the_permalink(); ?>" class="ca-slider_slide">
 					<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail(); ?>
 					<?php else : ?>
-					<div class="mo-slider_slide-placeholder">
+					<div class="ca-slider_slide-placeholder">
 						<i class="far fa-image" aria-hidden="true"></i>
 					</div>
 					<?php endif; ?>
 					<div class="slide-overlay">
 						<?php if ( !$hide_post_slider_cat ) : ?>
-						<span class="slide-overlay_category mo-category"><?php cali_get_first_cat_name(); ?></span>
+						<span class="slide-overlay_category ca-category"><?php cali_get_first_cat_name(); ?></span>
 						<?php endif; ?>
 						<?php the_title( '<h2 class="slide-overlay_title">', '</h2>' ); ?>
 						<span class="slide-overlay_meta">
