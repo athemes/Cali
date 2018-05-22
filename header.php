@@ -24,11 +24,11 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cali' ); ?></a>
 	<header id="masthead" class="site-header">
-		<div class="header-top clearfix mo-header-shadow--desktop">
+		<div class="header-top clearfix ca-header-shadow--desktop">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="mo-header-shadow--mobile clearfix">
-						<div class="col-xs-3 col-sm-2 mo-hide-on-desktop header-mobile-menu__wrap">
+					<div class="ca-header-shadow--mobile clearfix">
+						<div class="col-xs-3 col-sm-2 ca-hide-on-desktop header-mobile-menu__wrap">
 							<div class="header-mobile-menu">
 								<button class="mobile-menu-toggle" aria-controls="primary-menu">
 									<span class="mobile-menu-toggle_lines"></span>
@@ -36,7 +36,7 @@
 								</button>
 							</div>
 						</div><!-- /.header-mobile-menu -->
-						<div class="col-xs-12 col-sm-8 mo-hide-on-desktop">
+						<div class="col-xs-12 col-sm-8 ca-hide-on-desktop">
 							<div class="site-branding site-branding--mobile">
 								<?php the_custom_logo(); ?>
 								<?php if ( is_front_page() && is_home() ) : ?>
@@ -46,7 +46,7 @@
 								<?php endif; ?>
 							</div><!-- .site-branding--mobile -->
 						</div>
-						<div class="col-xs-3 col-sm-2 mo-hide-on-desktop pull-right secondary-navigation__wrap secondary-navigation__wrap--mobile-top">
+						<div class="col-xs-3 col-sm-2 ca-hide-on-desktop pull-right secondary-navigation__wrap secondary-navigation__wrap--mobile-top">
 							<div class="secondary-navigation">
 								<?php
 								$show_wc_cart = get_theme_mod( 'cali_show_wc_cart', 1 );
@@ -69,7 +69,7 @@
 										<?php get_search_form(); ?>
 									</div>
 
-									<div class="mo-hide-on-mobile">
+									<div class="ca-hide-on-mobile">
 										<?php 
 										if ( class_exists( 'Woocommerce' ) && $show_wc_cart ) :
 										
@@ -109,7 +109,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="site-branding site-branding--desktop mo-hide-on-mobile">
+		<div class="site-branding site-branding--desktop ca-hide-on-mobile">
 			<?php the_custom_logo(); ?>
 			<?php if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

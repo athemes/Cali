@@ -21,7 +21,7 @@ $hide_meta	  = get_theme_mod( 'cali_index_hide_meta', 0 );
 	<header class="entry-header">
 
 		<?php if ( !$hide_cats ) : ?>
-        <div class="cat-links mo-category">
+        <div class="cat-links ca-category">
             <?php cali_get_first_cat(); ?>
         </div>
 		<?php endif; ?>

@@ -45,7 +45,7 @@ class Cali_Sidebar_Posts extends WP_Widget {
 		<?php if ( $title ) {
 			echo $args['before_title'] . $title . $args['after_title'];
 		} ?>
-		<div class="mo-popular-posts">
+		<div class="ca-popular-posts">
 			<ul>
 			<?php while ( $r->have_posts() ) : $r->the_post(); ?>
 				<li>

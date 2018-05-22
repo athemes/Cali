@@ -11,7 +11,7 @@
         if ( $.fn.owlCarousel ) {
             
             // Article Carousel/Slider
-            $( '.js-mo-article-slider' ).each( function() {
+            $( '.js-ca-article-slider' ).each( function() {
 				$( this ).owlCarousel({
                     loop: true,
                     margin: 10,
@@ -37,12 +37,12 @@
             } );
             
             // need to add a class to the carousel item so it will be fetched by the carousel script
-            // Owl's nestedItemSelector parameter only accepts Class name, in our case it's - 'mo-instagram-feed_el'
-            $('.mo-instagram-feed .instagram-pics li').addClass('mo-instagram-feed_el');
+            // Owl's nestedItemSelector parameter only accepts Class name, in our case it's - 'ca-instagram-feed_el'
+            $('.ca-instagram-feed .instagram-pics li').addClass('ca-instagram-feed_el');
             
-            $( '.js-mo-widget-instagram-feed' ).each( function() {
+            $( '.js-ca-widget-instagram-feed' ).each( function() {
 				$( this ).owlCarousel({
-                    nestedItemSelector: 'mo-instagram-feed_el',
+                    nestedItemSelector: 'ca-instagram-feed_el',
                     loop: false,
                     margin: 10,
                     nav: false,
@@ -67,8 +67,8 @@
             } );
             
             // Append optional widget link to owl carousel item
-            if ( $('.mo-instagram-feed .instagram-pics + p').length ) {
-                $( '.mo-instagram-feed .instagram-pics + p' ).clone().appendTo( ".js-mo-widget-instagram-feed .mo-instagram-feed_el" );
+            if ( $('.ca-instagram-feed .instagram-pics + p').length ) {
+                $( '.ca-instagram-feed .instagram-pics + p' ).clone().appendTo( ".js-ca-widget-instagram-feed .ca-instagram-feed_el" );
             }
         }
     }

@@ -36,7 +36,7 @@ $postClasses = array(
         <header class="entry-header">
 
             <?php if ( !$hide_cats ) : ?>
-            <div class="cat-links mo-category">
+            <div class="cat-links ca-category">
                 <?php cali_show_cats(); ?>
             </div>
             <?php endif; ?>

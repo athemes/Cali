@@ -27,7 +27,7 @@ $sectionClass = is_404() ? 'error404' : 'no-results';
 	</div>
 	<div id="primary" class="content-area col-md-12">
 		<main id="main" class="site-main">
-			<section class="mo-txt--center">
+			<section class="ca-txt--center">
 				<?php
 				if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
